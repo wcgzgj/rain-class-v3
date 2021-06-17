@@ -1,10 +1,9 @@
 <template>
-    <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
+    <a-layout-header class="header">
         <div class="logo"/>
         <a-menu
                 theme="dark"
                 mode="horizontal"
-                v-model:selectedKeys="selectedKeys"
                 :style="{ lineHeight: '64px' }"
         >
             <a-menu-item key="/">
@@ -15,7 +14,7 @@
 
 
 
-            <a-menu-item key="/download">
+            <a-menu-item key="/download" :style="1==2?{}:{display:'none'}">
                 <router-link to="/download">
                     资源下载
                 </router-link>
@@ -32,6 +31,7 @@
                     讨论天地
                 </router-link>
             </a-menu-item>
+
 
 
             <!--学生操作下拉框-->
@@ -63,7 +63,6 @@
             <a-sub-menu key="admin">
                 <template #title>
             <span>
-              <user-outlined />
               <span>管理员</span>
             </span>
                 </template>
@@ -79,7 +78,6 @@
             <a-sub-menu key="login/register">
                 <template #title>
             <span>
-              <user-outlined />
               <span>登录/注册</span>
             </span>
                 </template>
@@ -92,7 +90,6 @@
             <a-sub-menu key="user">
                 <template #title>
             <span>
-              <user-outlined />
               <span>欢迎您: FARO_Z</span>
             </span>
                 </template>
@@ -100,8 +97,6 @@
                 <a-menu-item key="u2">密码重置</a-menu-item>
                 <a-menu-item key="u3">个人信息</a-menu-item>
             </a-sub-menu>
-
-
 
 
 
