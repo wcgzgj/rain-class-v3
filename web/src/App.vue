@@ -1,8 +1,28 @@
 <template>
-  <router-view/>
+  <a-layout>
+    <Header/>
+    <router-view/>
+    <Footer/>
+  </a-layout>
 </template>
 
-<style lang="scss">
+
+<script lang="ts">
+  import { defineComponent} from 'vue';
+  import Footer from './components/Footer.vue'
+  import Header from "./components/Header.vue";
+
+  export default defineComponent({
+    name: 'Home',
+    components: {
+      Footer,
+      Header
+    },
+  });
+</script>
+
+
+<style scoped>
 /*#app {*/
 /*  font-family: Avenir, Helvetica, Arial, sans-serif;*/
 /*  -webkit-font-smoothing: antialiased;*/
