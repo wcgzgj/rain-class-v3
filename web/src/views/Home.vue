@@ -23,12 +23,16 @@
               <img
                       width="200"
                       alt="logo"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
+                      src="../assets/ds.jpg"
               />
             </template>
             <a-list-item-meta :description="item.description">
               <template #title>
-                <a :href="item.href">{{ item.title }}</a>
+                <a :href="item.href">
+                  <router-link to="/classinfo">
+                    {{ item.title }}
+                  </router-link>
+                </a>
               </template>
             </a-list-item-meta>
             {{ item.content }}

@@ -12,9 +12,8 @@
                 </router-link>
             </a-menu-item>
 
-
-
-            <a-menu-item key="/download" :style="1==2?{}:{display:'none'}">
+            <!--不知道为什么，只要我这里隐藏一个子元素，后面的元素就跟着一起消失-->
+            <a-menu-item key="/download" :style="1==1?{}:{display:'none'}">
                 <router-link to="/download">
                     资源下载
                 </router-link>
@@ -41,9 +40,16 @@
               <span>学生</span>
             </span>
                 </template>
-                <a-menu-item key="s1">Tom</a-menu-item>
-                <a-menu-item key="s2">Bill</a-menu-item>
-                <a-menu-item key="s3">Alex</a-menu-item>
+                <a-menu-item key="s1">
+                    <router-link to="/studentClassList">
+                        学生选课
+                    </router-link>
+                </a-menu-item>
+                <a-menu-item key="s2">
+                    <router-link to="/studentChosenList">
+                        选课结果查询
+                    </router-link>
+                </a-menu-item>
             </a-sub-menu>
 
             <!--老师操作下拉框-->
@@ -53,9 +59,10 @@
               <span>老师</span>
             </span>
                 </template>
-                <a-menu-item key="t1">Tom</a-menu-item>
-                <a-menu-item key="t2">Bill</a-menu-item>
-                <a-menu-item key="t3">Alex</a-menu-item>
+                <a-menu-item key="t1">成绩导入</a-menu-item>
+                <a-menu-item key="t2">成绩分析</a-menu-item>
+                <a-menu-item key="t3">成绩预警</a-menu-item>
+                <a-menu-item key="t4">成绩通知</a-menu-item>
             </a-sub-menu>
 
 
@@ -81,7 +88,7 @@
               <span>登录/注册</span>
             </span>
                 </template>
-                <a-menu-item key="l1">登录</a-menu-item>
+                <a-menu-item key="l1" :onclick="showLogin">登录</a-menu-item>
                 <a-menu-item key="l2">注册</a-menu-item>
             </a-sub-menu>
 
@@ -93,7 +100,7 @@
               <span>欢迎您: FARO_Z</span>
             </span>
                 </template>
-                <a-menu-item key="u1">注销登录</a-menu-item>
+                <a-menu-item key="u1" :onclick="logout">注销登录</a-menu-item>
                 <a-menu-item key="u2">密码重置</a-menu-item>
                 <a-menu-item key="u3">个人信息</a-menu-item>
             </a-sub-menu>
@@ -102,11 +109,121 @@
 
         </a-menu>
     </a-layout-header>
+
+
+    <a-modal
+            v-model:visible="loginVisible"
+            title="登录"
+            ok-text="确认"
+            cancel-text="取消"
+            @ok="login">
+        <a-form :model="loginUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+            <a-form-item label="用户名">
+                <a-input v-model:value="loginUser.loginname" />
+            </a-form-item>
+            <a-form-item label="密码">
+                <a-input v-model:value="loginUser.password" type="password"/>
+            </a-form-item>
+            <a-form-item label="身份选择">
+                <a-radio-group v-model:value="loginUser.role" button-style="solid">
+                    <a-radio-button value="student">学生</a-radio-button>
+                    <a-radio-button value="teacher">老师</a-radio-button>
+                    <a-radio-button value="admin">管理员</a-radio-button>
+                </a-radio-group>
+            </a-form-item>
+        </a-form>
+    </a-modal>
+
 </template>
 
 <script>
+    import { defineComponent,ref } from 'vue';
+    import {Tool} from "@/util/Tool";
+    import { message } from 'ant-design-vue';
+    import {computed} from "@vue/reactivity";
+
     export default {
-        name: "Header"
+        name: "Header",
+        setup() {
+            /**
+             * 登录的用户信息
+             */
+            const user = computed(() => store.state.user);
+
+            /**
+             * 登录框
+             * @type {Ref<UnwrapRef<boolean>>}
+             */
+            const loginVisible = ref(false);
+
+            const loginUser = ref({
+                loginname:"",
+                password:"",
+                role:"student"
+            });
+
+            const showLogin = () => {
+                loginVisible.value = true;
+            };
+
+            const hideLogin = () => {
+                loginUser.value.loginname="";
+                loginUser.value.password="";
+                loginVisible.value = false;
+            };
+
+            const login = () => {
+                console.log("点击登录按钮");
+                if (Tool.isEmpty(loginUser.value.loginname) ||
+                    Tool.isEmpty(loginUser.value.password)) {
+                    message.error("请输入完整信息");
+                    return false;
+                }
+
+                axios.post("/user/login",loginUser).then(resp=> {
+                    const data=resp.data;
+                    if (data.success) {
+                        message.success("登录成功！");
+                        /**
+                         * 登录成功，将用户信息存入vuex
+                         */
+                        store.commit("setUser",data.content);
+                        hideLogin();
+                    } else {
+                        message.error(data.message);
+                    }
+                })
+            }
+
+
+            /**
+             * 登出框
+             */
+            const logout = () => {
+                axios.post("/user/logout/"+user.token).then(resp=>{
+                    const data = resp.data;
+                    if(data.success) {
+                        store.commit("setUser",{});
+                        message.success("退出成功！");
+                    } else {
+                        message.error(data.message);
+                    }
+                })
+            }
+
+
+
+
+
+            return {
+                loginVisible,
+                loginUser,
+                showLogin,
+                hideLogin,
+                login,
+                logout
+            }
+        }
     }
 </script>
 

@@ -3,6 +3,9 @@ import Home from '../views/Home.vue'
 import Download from '../views/public/Download.vue'
 import About from '../views/public/About.vue'
 import Comment from '../views/public/Comment.vue'
+import ClassInfo from '../views/class/ClassInfo.vue'
+import StudentClassList from '../views/student/StudentClassList.vue'
+import StudentChosenList from '../views/student/StudentChosenList.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,6 +27,21 @@ const routes: Array<RouteRecordRaw> = [
     path: '/comment',
     name: 'Comment',
     component: Comment
+  },
+  {
+    path: '/classinfo',
+    name: 'ClassInfo',
+    component: ClassInfo
+  },
+  {
+    path: '/studentClassList',
+    name: 'StudentClassList',
+    component: StudentClassList
+  },
+  {
+    path: '/studentChosenList',
+    name: 'StudentChosenList',
+    component: StudentChosenList
   },
 ]
 
