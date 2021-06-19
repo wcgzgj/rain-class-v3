@@ -10,6 +10,15 @@ package rainclassv3.resp;
 public abstract class UserLoginResp {
 
     protected String role;
+    protected String token;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public String getRole() {
         return role;
