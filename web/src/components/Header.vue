@@ -71,9 +71,9 @@
             <!--管理员操作下拉框-->
             <a-sub-menu key="admin">
                 <template #title>
-            <span>
-              <span>管理员</span>
-            </span>
+                    <span>
+                      <span>管理员</span>
+                    </span>
                 </template>
                 <a-menu-item key="a1">学生管理</a-menu-item>
                 <a-menu-item key="a2">教师管理</a-menu-item>
@@ -84,11 +84,11 @@
 
 
             <!--登录/注册下拉框-->
-            <a-sub-menu key="login/register">
+            <a-sub-menu key="login/register" :style="user.id?{visibility:'hidden'}:{}">
                 <template #title>
-            <span>
-              <span>登录/注册</span>
-            </span>
+                    <span>
+                      <span>登录/注册</span>
+                    </span>
                 </template>
                 <a-menu-item key="l1" :onclick="showLogin">登录</a-menu-item>
                 <a-menu-item key="l2">注册</a-menu-item>
@@ -96,11 +96,11 @@
 
 
             <!--用户下拉框下拉框-->
-            <a-sub-menu key="user">
+            <a-sub-menu key="user" :style="user.id?{}:{visibility:'hidden'}">
                 <template #title>
-            <span>
-              <span>欢迎您: FARO_Z</span>
-            </span>
+                    <span>
+                      <span>欢迎您: {{user.realname}}</span>
+                    </span>
                 </template>
                 <a-menu-item key="u1" :onclick="logout">注销登录</a-menu-item>
                 <a-menu-item key="u2">
@@ -261,10 +261,11 @@
             return {
                 loginVisible,
                 loginUser,
+                user,
                 showLogin,
                 hideLogin,
                 login,
-                logout
+                logout,
             }
         }
     }

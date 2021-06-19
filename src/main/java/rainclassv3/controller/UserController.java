@@ -40,6 +40,11 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    /**
+     * 登录接口
+     * @param req
+     * @return
+     */
     @PostMapping("/login")
     public CommonResp login(@RequestBody @Valid UserLoginReq req) {
         LOG.info("传入的密码信息为:{}",req.getPassword());
@@ -60,5 +65,6 @@ public class UserController {
         commonResp.setContent(loginUser);
         return commonResp;
     }
+
 
 }
