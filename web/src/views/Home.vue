@@ -4,7 +4,7 @@
     <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
       <a-input-search
-              v-model:value="searchValue"
+              v-model:value="searchForm.classname"
               placeholder="请输入课程名称"
               enter-button="搜索"
               size="large"
@@ -26,16 +26,14 @@
                       src="../assets/ds.jpg"
               />
             </template>
-            <a-list-item-meta :description="item.description">
+            <a-list-item-meta :description="'课程介绍'">
               <template #title>
-                <a :href="item.href">
-                  <router-link to="/classinfo">
-                    {{ item.title }}
-                  </router-link>
-                </a>
+                <router-link to="/classinfo">
+                  {{ item.classname }}
+                </router-link>
               </template>
             </a-list-item-meta>
-            {{ item.content }}
+            {{ item.desc }}
           </a-list-item>
         </template>
       </a-list>
@@ -49,22 +47,9 @@
 import { defineComponent,ref } from 'vue';
 import {Tool} from "@/util/Tool";
 import {message} from "ant-design-vue";
-import {AxiosInstance as axios} from "axios";
+import axios from 'axios';
 import {onMounted} from "@vue/runtime-core";
 
-const listData = [];
-
-for (let i = 0; i < 23; i++) {
-  listData.push({
-    title: `数据结构 ${i}`,
-    description:
-            '数据结构介绍',
-    content:
-            '数据结构（英语：data structure）是计算机中存储、组织数据的方式。\n' +
-            '\n' +
-            '数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。',
-  });
-}
 
 export default defineComponent({
   name: 'Home',
@@ -75,6 +60,7 @@ export default defineComponent({
      */
     const pagination = {
       onChange: page => {
+        searchForm.value.pageNum=page;
         onSearch(page);
       },
       pageSize: 3,
@@ -85,29 +71,41 @@ export default defineComponent({
      * 搜索
      * @type {Ref<UnwrapRef<string>>}
      */
-    const searchValue = ref("");
+
+    const listData = ref();
+
+    const searchForm = ref({
+      pageNum: 1,
+      pageSize: 3,
+      classname: ""
+    });
 
     const onSearch = (pageNum) => {
       console.log(pageNum);
-      console.log(pagination.pageSize);
-      // axios.get("/class/list",{
-      //   pageNum: pageNum,
-      //   pageSize: pagination.pageSize,
-      //   name: searchValue.value
-      // },{
-      //   timeout:5000
-      // }).then(resp => {
-      //   const data = resp.data;
-      //   if (data.success) {
-      //     /**
-      //      * 为 dataList 赋值
-      //      * 同时修改 pagination 的 total 值
-      //      */
-      //
-      //   } else {
-      //     message.error(data.message);
-      //   }
-      // })
+      console.log(searchForm.value.pageSize);
+
+      axios.get("/class/list",{
+        params:{
+          pageNum:searchForm.value.pageNum,
+          pageSize:searchForm.value.pageSize,
+          classname:searchForm.value.classname
+        }
+      }).then(resp => {
+        const data = resp.data;
+        if (data.success) {
+          const pageInfo = data.content;
+          /**
+           * 为 dataList 赋值
+           * 同时修改 pagination 的 total 值
+           */
+          listData.value=pageInfo.list;
+          pagination.pageSize=pageInfo.pageSize;
+          pagination.total=pageInfo.total;
+
+        } else {
+          message.error(data.message);
+        }
+      })
     }
 
     onMounted(()=>{
@@ -116,10 +114,10 @@ export default defineComponent({
 
 
     return {
-      searchValue,
       listData,
       pagination,
-      onSearch
+      onSearch,
+      searchForm
     };
   }
 

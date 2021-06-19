@@ -18,7 +18,7 @@ import javax.validation.constraints.Max;
 @NoArgsConstructor
 public class PageReq {
 
-    private int pageNum;
+    private int pageNum=1;
 
     /**
      * 之所以要对每页条数做限制
@@ -28,5 +28,5 @@ public class PageReq {
      * 那服务器就挂掉了
      */
     @Max(value = 1000,message = "【每页条数】不能超过1000")
-    private int pageSize;
+    private int pageSize=3;
 }

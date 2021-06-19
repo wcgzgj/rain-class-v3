@@ -10,20 +10,17 @@ import java.util.List;
  * @ClassName PageResp
  * @Description TODO
  * @Author FARO_Z
- * @Date 2021/6/19 下午1:45
+ * @Date 2021/6/19 下午2:28
  * @Version 1.0
  **/
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class PageResp<T> {
-    /**
-     * 记录后端分页查询后，查询出的总个数
-     */
-    private Long total;
-    /**
-     * 因为分页操作，只可能在查询的时候出现
-     * 所以，返回的必然是个 list
-     */
+
+    private Integer total;
+    private Integer pageNum;
+    private Integer pageSize;
+
     private List<T> list;
 }
