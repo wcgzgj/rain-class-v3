@@ -172,6 +172,8 @@
     import {Tool} from "@/util/Tool";
     import { message } from 'ant-design-vue';
     import {computed} from "@vue/reactivity";
+    import axios from 'axios';
+    import store from "@/store";
 
     export default {
         name: "Header",
@@ -221,7 +223,7 @@
                     return false;
                 }
 
-                axios.post("/user/login",loginUser).then(resp=> {
+                axios.post("/user/login",loginUser.value).then(resp=> {
                     const data=resp.data;
                     if (data.success) {
                         message.success("登录成功！");

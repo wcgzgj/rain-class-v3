@@ -86,7 +86,7 @@ public class TeacherLoginResp extends UserLoginResp {
         sb.append(", email=").append(email);
         sb.append(", createtime=").append(createtime);
         sb.append(", logintime=").append(logintime);
-        sb.append(", type=").append(type);
+        sb.append(", type=").append(role);
         sb.append("]");
         return sb.toString();
     }

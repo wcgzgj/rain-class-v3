@@ -1563,3 +1563,1300 @@ org.springframework.http.converter.HttpMessageNotReadableException: Required req
 2021-06-19 16:13:49.983 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61367826434363392 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
 2021-06-19 16:13:50.131 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61367826434363392 [0;39m 返回结果: {"content":{"list":[{"classname":"数据结构","code":"123","credit":2,"desc":"这是数据结构的课程","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacher":{"id":2,"loginname":"jojo","realname":"jojo"},"teacherid":2,"type":"专业主干课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":1,"pageSize":3,"total":7},"success":true}
 2021-06-19 16:13:50.132 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61367826434363392 [0;39m ------------- 结束 耗时：151 ms -------------
+2021-06-19 17:42:53.989 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61390240820105216 [0;39m ------------- 开始 -------------
+2021-06-19 17:42:54.015 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61390240820105216 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-19 17:42:54.016 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61390240820105216 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-19 17:42:54.016 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61390240820105216 [0;39m 远程地址: 127.0.0.1
+2021-06-19 17:42:54.018 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61390240820105216 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
+2021-06-19 17:42:54.116 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53d7c3b6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.129 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66d7da47 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.135 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b80d297 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.137 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66276a22 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.140 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6d00e1c9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.143 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@355d1bcc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.151 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3844739a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.157 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@656f68ca (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.173 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@52552a41 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:54.213 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61390240820105216 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@49165b32 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 17:42:55.112 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61390240820105216 [0;39m 返回结果: {"content":{"list":[{"classname":"数据结构","code":"123","credit":2,"desc":"这是数据结构的课程","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacher":{"id":2,"loginname":"jojo","realname":"jojo"},"teacherid":2,"type":"专业主干课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":1,"pageSize":3,"total":7},"success":true}
+2021-06-19 17:42:55.113 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61390240820105216 [0;39m ------------- 结束 耗时：1129 ms -------------
+2021-06-19 17:47:17.808 WARN  com.zaxxer.hikari.pool.HikariPool                 :780  [32m                  [0;39m HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s857ms), soft-evicting connections from pool.
+2021-06-19 18:18:43.996 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m26s156ms).
+2021-06-19 18:33:34.930 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m50s912ms).
+2021-06-19 18:42:12.818 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61405167635009536 [0;39m ------------- 开始 -------------
+2021-06-19 18:42:12.826 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61405167635009536 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-19 18:42:12.827 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61405167635009536 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-19 18:42:12.827 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61405167635009536 [0;39m 远程地址: 127.0.0.1
+2021-06-19 18:42:12.829 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61405167635009536 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
+2021-06-19 18:42:17.857 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61405167635009536 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@436af8d6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 18:42:22.866 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61405167635009536 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@57344ddc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 18:42:27.879 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61405167635009536 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19c2b4d3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 18:42:32.892 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61405167635009536 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@588293a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 18:42:37.901 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61405167635009536 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@bc07419 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 18:42:42.908 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61405167635009536 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1f39743 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-19 18:42:43.030 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61405167635009536 [0;39m 系统异常：
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30087ms.
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:309)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.service.impl.ClassServiceImpl$$EnhancerBySpringCGLIB$$34d7000d.list(<generated>)
+	at rainclassv3.controller.ClassController.list(ClassController.java:35)
+	at rainclassv3.controller.ClassController$$FastClassBySpringCGLIB$$ecc052ef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.GeneratedMethodAccessor118.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.ClassController$$EnhancerBySpringCGLIB$$e5f6b382.list(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30087ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:265)
+	... 83 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2496)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186)
+	... 86 common frames omitted
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.GeneratedConstructorAccessor45.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:573)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2492)
+	... 89 common frames omitted
+2021-06-19 18:42:43.044 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61405167635009536 [0;39m Resolved [org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30087ms.]
+2021-06-19 18:43:24.689 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 18:43:24.698 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 18:43:24.763 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 18:43:24.769 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 20153 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:43:24.769 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:43:24.852 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 18:43:24.852 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 18:43:25.215 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 18242 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:43:25.216 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:43:25.868 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:43:25.871 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:43:26.116 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:43:26.129 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:43:26.193 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 18:43:26.194 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:26.194 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:43:26.195 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:43:26.225 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:43:26.225 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 999 ms
+2021-06-19 18:43:26.979 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 18:43:26.990 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:26.991 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:43:26.991 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:43:27.011 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:43:27.059 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:43:27.059 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 2206 ms
+2021-06-19 18:43:27.129 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
+2021-06-19 18:43:27.268 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2021-06-19 18:43:27.527 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 18:43:27.549 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:27.551 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 18:43:27.556 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 2.481 seconds (JVM running for 6927.292)
+2021-06-19 18:43:27.558 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-06-19 18:43:28.017 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:43:28.134 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 18:43:28.401 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 18:43:28.617 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m                  [0;39m Unable to start LiveReload server
+2021-06-19 18:43:28.639 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:28.660 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9000 is already in use
+2021-06-19 18:43:28.663 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 18:43:28.734 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 18:43:28.738 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:28.738 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2021-06-19 18:43:28.742 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:28.742 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:28.751 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-19 18:43:28.773 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9000 or configure this application to listen on another port.
+
+2021-06-19 18:43:48.586 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 18:43:48.592 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 20171 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:43:48.593 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:43:48.638 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 18:43:48.639 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 18:43:49.225 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:43:49.232 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:43:49.820 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 18:43:49.827 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:49.828 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:43:49.828 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:43:49.886 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:43:49.886 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1247 ms
+2021-06-19 18:43:50.571 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:43:50.650 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 18:43:50.903 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 18:43:51.066 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m                  [0;39m Unable to start LiveReload server
+2021-06-19 18:43:51.083 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:51.104 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9000 is already in use
+2021-06-19 18:43:51.107 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 18:43:51.119 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 18:43:51.121 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:51.122 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2021-06-19 18:43:51.125 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:51.125 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:43:51.132 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-19 18:43:51.144 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9000 or configure this application to listen on another port.
+
+2021-06-19 18:44:02.028 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 18:44:02.035 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 20178 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:44:02.036 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:44:02.073 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 18:44:02.074 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 18:44:02.626 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:44:02.633 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:44:03.203 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 18:44:03.210 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:44:03.210 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:44:03.210 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:44:03.263 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:44:03.263 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1189 ms
+2021-06-19 18:44:03.951 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:44:04.031 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 18:44:04.286 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 18:44:04.434 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m                  [0;39m Unable to start LiveReload server
+2021-06-19 18:44:04.452 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:44:04.472 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9000 is already in use
+2021-06-19 18:44:04.475 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 18:44:04.536 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 18:44:04.539 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:44:04.539 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2021-06-19 18:44:04.543 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:44:04.543 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:44:04.550 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-19 18:44:04.562 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9000 or configure this application to listen on another port.
+
+2021-06-19 18:45:54.940 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 18:45:54.966 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 20817 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:45:54.983 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:45:55.199 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 18:45:55.200 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 18:45:56.744 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:45:56.767 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 16 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:45:58.108 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 18:45:58.154 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:45:58.155 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:45:58.155 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:45:58.367 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:45:58.368 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 3166 ms
+2021-06-19 18:45:59.453 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:45:59.562 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 18:45:59.825 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 18:46:00.104 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m                  [0;39m Unable to start LiveReload server
+2021-06-19 18:46:00.132 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:46:00.175 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9000 is already in use
+2021-06-19 18:46:00.181 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 18:46:00.195 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 18:46:00.198 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:46:00.198 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2021-06-19 18:46:00.203 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:46:00.204 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-9000"]
+2021-06-19 18:46:00.212 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-19 18:46:00.228 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9000 or configure this application to listen on another port.
+
+2021-06-19 18:46:23.152 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2021-06-19 18:46:23.164 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2021-06-19 18:46:23.665 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 18242 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:46:23.666 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:46:23.812 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 18:46:23.819 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 20822 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:46:23.820 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:46:23.877 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 18:46:23.877 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 18:46:24.021 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:46:24.023 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:46:24.192 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9010 (http)
+2021-06-19 18:46:24.194 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9010"]
+2021-06-19 18:46:24.194 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:46:24.194 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:46:24.207 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:46:24.208 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 538 ms
+2021-06-19 18:46:24.495 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:46:24.503 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:46:24.647 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:46:24.721 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-3 - Starting...
+2021-06-19 18:46:24.884 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-3 - Start completed.
+2021-06-19 18:46:25.042 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 18:46:25.058 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9010"]
+2021-06-19 18:46:25.063 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9010 (http) with context path ''
+2021-06-19 18:46:25.069 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 1.469 seconds (JVM running for 7104.807)
+2021-06-19 18:46:25.071 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-06-19 18:46:25.161 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9010 (http)
+2021-06-19 18:46:25.167 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9010"]
+2021-06-19 18:46:25.168 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:46:25.168 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:46:25.219 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:46:25.219 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1341 ms
+2021-06-19 18:46:25.924 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:46:26.028 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 18:46:26.238 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 18:46:26.382 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m                  [0;39m Unable to start LiveReload server
+2021-06-19 18:46:26.400 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9010"]
+2021-06-19 18:46:26.420 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9010 is already in use
+2021-06-19 18:46:26.423 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 18:46:26.461 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 18:46:26.465 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-9010"]
+2021-06-19 18:46:26.465 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2021-06-19 18:46:26.472 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-9010"]
+2021-06-19 18:46:26.474 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-9010"]
+2021-06-19 18:46:26.482 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-19 18:46:26.507 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9010 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9010 or configure this application to listen on another port.
+
+2021-06-19 18:46:36.607 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2021-06-19 18:46:36.612 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-3 - Shutdown completed.
+2021-06-19 18:46:36.788 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 18242 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:46:36.789 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:46:36.932 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:46:36.933 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:46:37.027 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9099 (http)
+2021-06-19 18:46:37.028 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9099"]
+2021-06-19 18:46:37.028 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:46:37.028 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:46:37.034 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:46:37.035 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 244 ms
+2021-06-19 18:46:37.302 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 18:46:37.303 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 20827 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 18:46:37.306 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 18:46:37.383 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 18:46:37.384 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 18:46:37.407 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:46:37.540 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-4 - Starting...
+2021-06-19 18:46:37.671 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-4 - Start completed.
+2021-06-19 18:46:37.801 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 18:46:37.814 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9099"]
+2021-06-19 18:46:37.816 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9099 (http) with context path ''
+2021-06-19 18:46:37.819 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 1.06 seconds (JVM running for 7117.558)
+2021-06-19 18:46:37.821 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-06-19 18:46:37.984 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 18:46:37.991 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 18:46:38.574 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9099 (http)
+2021-06-19 18:46:38.581 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9099"]
+2021-06-19 18:46:38.582 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 18:46:38.582 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 18:46:38.636 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 18:46:38.636 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1252 ms
+2021-06-19 18:46:39.313 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 18:46:39.415 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 18:46:39.671 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 18:46:39.837 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m                  [0;39m Unable to start LiveReload server
+2021-06-19 18:46:39.855 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9099"]
+2021-06-19 18:46:39.876 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9099 is already in use
+2021-06-19 18:46:39.880 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 18:46:39.889 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 18:46:39.892 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-9099"]
+2021-06-19 18:46:39.892 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2021-06-19 18:46:39.896 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-9099"]
+2021-06-19 18:46:39.897 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-9099"]
+2021-06-19 18:46:39.903 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-19 18:46:39.915 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9099 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9099 or configure this application to listen on another port.
+
+2021-06-19 18:47:03.837 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-4 - Shutdown initiated...
+2021-06-19 18:47:03.840 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-4 - Shutdown completed.
+2021-06-19 19:13:44.750 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 19:13:44.754 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 2307 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 19:13:44.755 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 19:13:44.818 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 19:13:44.818 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 19:13:45.651 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 19:13:45.661 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2021-06-19 19:13:46.473 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 19:13:46.485 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:13:46.486 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 19:13:46.486 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 19:13:46.551 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 19:13:46.551 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1732 ms
+2021-06-19 19:13:47.480 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 19:13:47.602 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 19:13:48.566 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 19:13:48.828 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 19:13:48.848 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:13:48.881 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 19:13:48.893 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 4.703 seconds (JVM running for 5.663)
+2021-06-19 19:13:58.329 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-19 19:13:58.329 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-19 19:13:58.331 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-06-19 19:13:58.354 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61413160028082176 [0;39m ------------- 开始 -------------
+2021-06-19 19:13:58.355 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61413160028082176 [0;39m 请求地址: http://localhost:9000/class/all GET
+2021-06-19 19:13:58.355 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61413160028082176 [0;39m 类名方法: rainclassv3.controller.ClassController.all
+2021-06-19 19:13:58.355 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61413160028082176 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:13:58.425 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61413160028082176 [0;39m 请求参数: []
+2021-06-19 19:13:58.654 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61413160028082176 [0;39m 返回结果: [{"classname":"数据结构","code":"123","createtime":1624085696000,"credit":2,"desc":"这是数据结构的课程","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","createtime":1624085701000,"credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacherid":2,"type":"专业主干课"},{"classname":"操作系统","code":"123","createtime":1624085704000,"credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacherid":3,"type":"专业主干课"},{"classname":"操作系统","code":"123","createtime":1624085704000,"credit":3,"desc":"这是操作系统的课程","id":4,"notice":"带好课本","place":"明理楼","starttime":"周三","teacherid":3,"type":"专业主干课"},{"classname":"操作系统","code":"123","createtime":1624085704000,"credit":3,"desc":"这是操作系统的课程","id":5,"notice":"带好课本","place":"明理楼","starttime":"周三","teacherid":3,"type":"专业主干课"},{"classname":"操作系统","code":"123","createtime":1624085704000,"credit":3,"desc":"这是操作系统的课程","id":6,"notice":"带好课本","place":"明理楼","starttime":"周三","teacherid":3,"type":"专业主干课"},{"classname":"操作系统","code":"123","createtime":1624085704000,"credit":3,"desc":"这是操作系统的课程","id":7,"notice":"带好课本","place":"明理楼","starttime":"周三","teacherid":3,"type":"专业主干课"}]
+2021-06-19 19:13:58.654 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61413160028082176 [0;39m ------------- 结束 耗时：302 ms -------------
+2021-06-19 19:14:25.513 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61413273949573120 [0;39m ------------- 开始 -------------
+2021-06-19 19:14:25.515 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61413273949573120 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-19 19:14:25.516 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61413273949573120 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-19 19:14:25.516 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61413273949573120 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:14:25.520 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61413273949573120 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
+2021-06-19 19:14:26.202 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61413273949573120 [0;39m 返回结果: {"content":{"list":[{"classname":"数据结构","code":"123","credit":2,"desc":"这是数据结构的课程","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacher":{"id":2,"loginname":"jojo","realname":"jojo"},"teacherid":2,"type":"专业主干课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":1,"pageSize":3,"total":7},"success":true}
+2021-06-19 19:14:26.203 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61413273949573120 [0;39m ------------- 结束 耗时：690 ms -------------
+2021-06-19 19:14:29.136 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61413289145536512 [0;39m ------------- 开始 -------------
+2021-06-19 19:14:29.137 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61413289145536512 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-19 19:14:29.138 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61413289145536512 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-19 19:14:29.138 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61413289145536512 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:14:29.139 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61413289145536512 [0;39m 请求参数: [{"classname":"","pageNum":2,"pageSize":3}]
+2021-06-19 19:14:29.562 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61413289145536512 [0;39m 返回结果: {"content":{"list":[{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":4,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":5,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"专业主干课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":6,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"专业主干课"}],"pageNum":2,"pageSize":3,"total":7},"success":true}
+2021-06-19 19:14:29.563 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61413289145536512 [0;39m ------------- 结束 耗时：427 ms -------------
+2021-06-19 19:14:30.040 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61413292937187328 [0;39m ------------- 开始 -------------
+2021-06-19 19:14:30.040 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61413292937187328 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-19 19:14:30.040 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61413292937187328 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-19 19:14:30.041 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61413292937187328 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:14:30.041 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61413292937187328 [0;39m 请求参数: [{"classname":"","pageNum":3,"pageSize":3}]
+2021-06-19 19:14:30.389 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61413292937187328 [0;39m 返回结果: {"content":{"list":[{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":7,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":3,"pageSize":3,"total":7},"success":true}
+2021-06-19 19:14:30.390 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61413292937187328 [0;39m ------------- 结束 耗时：350 ms -------------
+2021-06-19 19:14:31.527 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61413299174117376 [0;39m ------------- 开始 -------------
+2021-06-19 19:14:31.528 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61413299174117376 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-19 19:14:31.528 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61413299174117376 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-19 19:14:31.528 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61413299174117376 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:14:31.529 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61413299174117376 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
+2021-06-19 19:14:32.047 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61413299174117376 [0;39m 返回结果: {"content":{"list":[{"classname":"数据结构","code":"123","credit":2,"desc":"这是数据结构的课程","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacher":{"id":2,"loginname":"jojo","realname":"jojo"},"teacherid":2,"type":"专业主干课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":1,"pageSize":3,"total":7},"success":true}
+2021-06-19 19:14:32.047 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61413299174117376 [0;39m ------------- 结束 耗时：520 ms -------------
+2021-06-19 19:16:33.525 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 19:16:33.542 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 19:16:37.579 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 19:16:37.584 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 2360 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 19:16:37.585 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 19:16:37.627 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 19:16:37.627 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 19:16:38.236 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 19:16:38.244 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 19:16:38.838 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 19:16:38.846 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:16:38.846 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 19:16:38.846 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 19:16:38.901 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 19:16:38.901 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1273 ms
+2021-06-19 19:16:39.585 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 19:16:39.694 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 19:16:40.332 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 19:16:40.497 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 19:16:40.516 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:16:40.548 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 19:16:40.558 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 3.329 seconds (JVM running for 4.075)
+2021-06-19 19:17:28.010 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-19 19:17:28.011 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-19 19:17:28.019 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 7 ms
+2021-06-19 19:17:28.262 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61414040450240512 [0;39m ------------- 开始 -------------
+2021-06-19 19:17:28.263 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61414040450240512 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:17:28.264 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61414040450240512 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:17:28.264 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61414040450240512 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:17:28.323 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61414040450240512 [0;39m 请求参数: [{"loginname":"123","role":"student"}]
+2021-06-19 19:17:28.329 INFO  rainclassv3.controller.UserController             :30   [32m61414040450240512 [0;39m 传入的角色信息为:student
+2021-06-19 19:17:28.332 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61414040450240512 [0;39m 返回结果: {"success":true}
+2021-06-19 19:17:28.332 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61414040450240512 [0;39m ------------- 结束 耗时：71 ms -------------
+2021-06-19 19:17:51.161 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61414136499802112 [0;39m ------------- 开始 -------------
+2021-06-19 19:17:51.162 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61414136499802112 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:17:51.163 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61414136499802112 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:17:51.163 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61414136499802112 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:17:51.164 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61414136499802112 [0;39m 请求参数: [{"loginname":"123","role":"student"}]
+2021-06-19 19:17:51.165 INFO  rainclassv3.controller.UserController             :30   [32m61414136499802112 [0;39m 传入的角色信息为:student
+2021-06-19 19:17:51.165 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61414136499802112 [0;39m 返回结果: {"success":true}
+2021-06-19 19:17:51.166 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61414136499802112 [0;39m ------------- 结束 耗时：5 ms -------------
+2021-06-19 19:18:34.266 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 19:18:34.282 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 19:18:38.072 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 19:18:38.077 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 2393 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 19:18:38.078 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 19:18:38.130 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 19:18:38.130 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 19:18:38.788 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 19:18:38.796 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 19:18:39.387 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 19:18:39.395 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:18:39.395 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 19:18:39.395 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 19:18:39.445 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 19:18:39.458 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1327 ms
+2021-06-19 19:18:40.148 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 19:18:40.258 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 19:18:41.016 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 19:18:41.176 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 19:18:41.194 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:18:41.220 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 19:18:41.233 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 3.508 seconds (JVM running for 4.23)
+2021-06-19 19:18:45.448 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-19 19:18:45.448 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-19 19:18:45.449 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-06-19 19:18:45.599 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61414364829323264 [0;39m ------------- 开始 -------------
+2021-06-19 19:18:45.600 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61414364829323264 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:18:45.601 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61414364829323264 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:18:45.601 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61414364829323264 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:18:45.650 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61414364829323264 [0;39m 请求参数: [{"loginname":"123","role":"student"}]
+2021-06-19 19:18:45.655 INFO  rainclassv3.controller.UserController             :30   [32m61414364829323264 [0;39m 传入的密码信息为:123
+2021-06-19 19:18:45.663 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61414364829323264 [0;39m 返回结果: {"success":true}
+2021-06-19 19:18:45.663 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61414364829323264 [0;39m ------------- 结束 耗时：65 ms -------------
+2021-06-19 19:19:38.662 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61414587391676416 [0;39m ------------- 开始 -------------
+2021-06-19 19:19:38.664 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61414587391676416 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:19:38.664 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61414587391676416 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:19:38.665 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61414587391676416 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:19:38.665 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61414587391676416 [0;39m 请求参数: [{"loginname":"123","role":"student"}]
+2021-06-19 19:19:38.666 INFO  rainclassv3.controller.UserController             :30   [32m61414587391676416 [0;39m 传入的密码信息为:123
+2021-06-19 19:19:38.667 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61414587391676416 [0;39m 返回结果: {"success":true}
+2021-06-19 19:19:38.668 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61414587391676416 [0;39m ------------- 结束 耗时：6 ms -------------
+2021-06-19 19:40:51.225 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 19:40:51.247 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 19:40:55.214 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 19:40:55.217 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 2561 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 19:40:55.218 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 19:40:55.260 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 19:40:55.260 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 19:40:55.861 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 19:40:55.869 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 19:40:56.452 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 19:40:56.460 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:40:56.461 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 19:40:56.461 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 19:40:56.514 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 19:40:56.515 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1253 ms
+2021-06-19 19:40:57.208 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 19:40:57.313 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 19:40:58.022 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 19:40:58.187 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 19:40:58.206 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:40:58.233 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 19:40:58.247 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 3.401 seconds (JVM running for 4.138)
+2021-06-19 19:41:08.677 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-19 19:41:08.678 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-19 19:41:08.680 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-06-19 19:41:08.862 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61419998878502912 [0;39m ------------- 开始 -------------
+2021-06-19 19:41:08.863 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61419998878502912 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:41:08.863 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61419998878502912 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:41:08.864 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61419998878502912 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:41:08.935 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61419998878502912 [0;39m 请求参数: [{"loginname":"1","role":"student"}]
+2021-06-19 19:41:08.944 INFO  rainclassv3.controller.UserController             :35   [32m61419998878502912 [0;39m 传入的密码信息为:2
+2021-06-19 19:41:08.945 INFO  rainclassv3.service.impl.UserServiceImpl          :54   [32m61419998878502912 [0;39m 登录的角色为:student
+2021-06-19 19:41:09.186 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61419998878502912 [0;39m 系统异常：
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at rainclassv3.service.impl.UserServiceImpl.login(UserServiceImpl.java:66)
+	at rainclassv3.controller.UserController.login(UserController.java:36)
+	at rainclassv3.controller.UserController$$FastClassBySpringCGLIB$$5fd8e6ac.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.UserController$$EnhancerBySpringCGLIB$$3e30a758.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-19 19:41:09.226 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61419998878502912 [0;39m Resolved [java.lang.IndexOutOfBoundsException: Index: 0, Size: 0]
+2021-06-19 19:42:55.795 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 19:42:55.809 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 19:42:59.787 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 19:42:59.790 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 2591 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 19:42:59.797 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 19:42:59.835 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 19:42:59.836 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 19:43:00.406 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 19:43:00.415 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2021-06-19 19:43:01.005 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 19:43:01.012 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:43:01.013 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 19:43:01.013 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 19:43:01.064 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 19:43:01.065 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1228 ms
+2021-06-19 19:43:01.744 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 19:43:01.841 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 19:43:02.516 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 19:43:02.677 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 19:43:02.694 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:43:02.719 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 19:43:02.734 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 3.291 seconds (JVM running for 3.945)
+2021-06-19 19:43:10.235 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-19 19:43:10.237 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-19 19:43:10.250 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 12 ms
+2021-06-19 19:43:10.462 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61420508905869312 [0;39m ------------- 开始 -------------
+2021-06-19 19:43:10.465 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61420508905869312 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:43:10.466 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61420508905869312 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:43:10.466 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61420508905869312 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:43:10.541 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61420508905869312 [0;39m 请求参数: [{"loginname":"1","role":"student"}]
+2021-06-19 19:43:10.547 INFO  rainclassv3.controller.UserController             :35   [32m61420508905869312 [0;39m 传入的密码信息为:2
+2021-06-19 19:43:10.548 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61420508905869312 [0;39m 登录的角色为:student
+2021-06-19 19:43:10.807 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61420508905869312 [0;39m 系统异常：
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at rainclassv3.service.impl.UserServiceImpl.login(UserServiceImpl.java:68)
+	at rainclassv3.controller.UserController.login(UserController.java:36)
+	at rainclassv3.controller.UserController$$FastClassBySpringCGLIB$$5fd8e6ac.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.UserController$$EnhancerBySpringCGLIB$$4193057f.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-19 19:43:10.842 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61420508905869312 [0;39m Resolved [java.lang.IndexOutOfBoundsException: Index: 0, Size: 0]
+2021-06-19 19:43:28.592 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61420584952795136 [0;39m ------------- 开始 -------------
+2021-06-19 19:43:28.593 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61420584952795136 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:43:28.593 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61420584952795136 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:43:28.594 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61420584952795136 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:43:28.594 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61420584952795136 [0;39m 请求参数: [{"loginname":"1","role":"teacher"}]
+2021-06-19 19:43:28.594 INFO  rainclassv3.controller.UserController             :35   [32m61420584952795136 [0;39m 传入的密码信息为:2
+2021-06-19 19:43:28.595 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61420584952795136 [0;39m 登录的角色为:teacher
+2021-06-19 19:43:28.702 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61420584952795136 [0;39m 系统异常：
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at rainclassv3.service.impl.UserServiceImpl.login(UserServiceImpl.java:82)
+	at rainclassv3.controller.UserController.login(UserController.java:36)
+	at rainclassv3.controller.UserController$$FastClassBySpringCGLIB$$5fd8e6ac.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.UserController$$EnhancerBySpringCGLIB$$4193057f.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-19 19:43:28.707 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61420584952795136 [0;39m Resolved [java.lang.IndexOutOfBoundsException: Index: 0, Size: 0]
+2021-06-19 19:43:35.530 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61420614052876288 [0;39m ------------- 开始 -------------
+2021-06-19 19:43:35.531 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61420614052876288 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:43:35.531 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61420614052876288 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:43:35.532 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61420614052876288 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:43:35.532 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61420614052876288 [0;39m 请求参数: [{"loginname":"1","role":"teacher"}]
+2021-06-19 19:43:35.533 INFO  rainclassv3.controller.UserController             :35   [32m61420614052876288 [0;39m 传入的密码信息为:2
+2021-06-19 19:43:35.534 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61420614052876288 [0;39m 登录的角色为:teacher
+2021-06-19 19:43:35.641 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61420614052876288 [0;39m 系统异常：
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at rainclassv3.service.impl.UserServiceImpl.login(UserServiceImpl.java:82)
+	at rainclassv3.controller.UserController.login(UserController.java:36)
+	at rainclassv3.controller.UserController$$FastClassBySpringCGLIB$$5fd8e6ac.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.UserController$$EnhancerBySpringCGLIB$$4193057f.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-19 19:43:35.644 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61420614052876288 [0;39m Resolved [java.lang.IndexOutOfBoundsException: Index: 0, Size: 0]
+2021-06-19 19:45:17.591 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 19:45:17.600 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 19:45:21.495 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 19:45:21.498 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 2605 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 19:45:21.498 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 19:45:21.534 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 19:45:21.534 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 19:45:22.129 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 19:45:22.136 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 19:45:22.736 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 19:45:22.744 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:45:22.745 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 19:45:22.745 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 19:45:22.799 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 19:45:22.799 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1264 ms
+2021-06-19 19:45:23.484 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 19:45:23.569 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 19:45:24.172 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 19:45:24.333 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 19:45:24.351 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:45:24.376 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 19:45:24.390 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 3.236 seconds (JVM running for 3.895)
+2021-06-19 19:45:28.726 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-19 19:45:28.727 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-19 19:45:28.728 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-06-19 19:45:28.854 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61421089363988480 [0;39m ------------- 开始 -------------
+2021-06-19 19:45:28.855 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61421089363988480 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:45:28.855 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61421089363988480 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:45:28.855 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61421089363988480 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:45:28.905 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61421089363988480 [0;39m 请求参数: [{"loginname":"1","role":"teacher"}]
+2021-06-19 19:45:28.908 INFO  rainclassv3.controller.UserController             :35   [32m61421089363988480 [0;39m 传入的密码信息为:2
+2021-06-19 19:45:28.909 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61421089363988480 [0;39m 登录的角色为:teacher
+2021-06-19 19:45:29.146 INFO  rainclassv3.service.impl.UserServiceImpl          :79   [32m61421089363988480 [0;39m 查询出的教师信息为:[]
+2021-06-19 19:45:29.149 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61421089363988480 [0;39m 系统异常：
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at rainclassv3.service.impl.UserServiceImpl.login(UserServiceImpl.java:83)
+	at rainclassv3.controller.UserController.login(UserController.java:36)
+	at rainclassv3.controller.UserController$$FastClassBySpringCGLIB$$5fd8e6ac.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.UserController$$EnhancerBySpringCGLIB$$91a23ece.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-19 19:45:29.172 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61421089363988480 [0;39m Resolved [java.lang.IndexOutOfBoundsException: Index: 0, Size: 0]
+2021-06-19 19:46:11.075 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 19:46:11.088 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 19:46:14.625 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 19:46:14.629 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 2616 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 19:46:14.630 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 19:46:14.671 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 19:46:14.671 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 19:46:15.292 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 19:46:15.300 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 19:46:15.882 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 19:46:15.890 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:46:15.891 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 19:46:15.891 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 19:46:15.944 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 19:46:15.945 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1273 ms
+2021-06-19 19:46:16.622 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 19:46:16.700 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 19:46:17.342 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 19:46:17.502 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 19:46:17.520 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:46:17.545 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 19:46:17.558 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 3.281 seconds (JVM running for 3.801)
+2021-06-19 19:46:22.594 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-19 19:46:22.595 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-19 19:46:22.596 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-06-19 19:46:22.725 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61421315315339264 [0;39m ------------- 开始 -------------
+2021-06-19 19:46:22.725 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61421315315339264 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:46:22.725 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61421315315339264 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:46:22.726 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61421315315339264 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:46:22.775 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61421315315339264 [0;39m 请求参数: [{"loginname":"1","role":"teacher"}]
+2021-06-19 19:46:22.779 INFO  rainclassv3.controller.UserController             :35   [32m61421315315339264 [0;39m 传入的密码信息为:2
+2021-06-19 19:46:22.779 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61421315315339264 [0;39m 登录的角色为:teacher
+2021-06-19 19:46:23.003 INFO  rainclassv3.service.impl.UserServiceImpl          :79   [32m61421315315339264 [0;39m 查询出的教师信息为:[]
+2021-06-19 19:46:23.008 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61421315315339264 [0;39m 系统异常：
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at rainclassv3.service.impl.UserServiceImpl.login(UserServiceImpl.java:84)
+	at rainclassv3.controller.UserController.login(UserController.java:36)
+	at rainclassv3.controller.UserController$$FastClassBySpringCGLIB$$5fd8e6ac.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.UserController$$EnhancerBySpringCGLIB$$e9282ec4.login(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-19 19:46:23.031 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61421315315339264 [0;39m Resolved [java.lang.IndexOutOfBoundsException: Index: 0, Size: 0]
+2021-06-19 19:47:12.992 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-19 19:47:13.003 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-19 19:47:16.559 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-19 19:47:16.562 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 2625 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-19 19:47:16.563 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-19 19:47:16.597 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-19 19:47:16.597 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-19 19:47:17.093 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-19 19:47:17.100 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-19 19:47:17.701 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-19 19:47:17.709 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:47:17.709 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-19 19:47:17.710 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-19 19:47:17.766 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-19 19:47:17.766 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1168 ms
+2021-06-19 19:47:18.515 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-19 19:47:18.606 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-19 19:47:20.133 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-19 19:47:20.294 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-19 19:47:20.312 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-19 19:47:20.340 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-19 19:47:20.358 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 4.139 seconds (JVM running for 4.666)
+2021-06-19 19:47:24.345 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-19 19:47:24.346 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-19 19:47:24.348 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2021-06-19 19:47:24.468 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61421574284251136 [0;39m ------------- 开始 -------------
+2021-06-19 19:47:24.469 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61421574284251136 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:47:24.469 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61421574284251136 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:47:24.469 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61421574284251136 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:47:24.513 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61421574284251136 [0;39m 请求参数: [{"loginname":"1","role":"teacher"}]
+2021-06-19 19:47:24.517 INFO  rainclassv3.controller.UserController             :35   [32m61421574284251136 [0;39m 传入的密码信息为:2
+2021-06-19 19:47:24.517 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61421574284251136 [0;39m 登录的角色为:teacher
+2021-06-19 19:47:24.704 INFO  rainclassv3.service.impl.UserServiceImpl          :79   [32m61421574284251136 [0;39m 查询出的教师信息为:[]
+2021-06-19 19:47:24.705 INFO  rainclassv3.service.impl.UserServiceImpl          :81   [32m61421574284251136 [0;39m 准备抛出异常
+2021-06-19 19:47:24.708 WARN  rainclassv3.controller.ControllerExceptionHandler :54   [32m61421574284251136 [0;39m 业务异常：用户名不存在或密码错误
+2021-06-19 19:47:24.731 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61421574284251136 [0;39m Resolved [rainclassv3.exception.BusinessException: 用户名不存在或密码错误]
+2021-06-19 19:47:37.788 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61421630156574720 [0;39m ------------- 开始 -------------
+2021-06-19 19:47:37.789 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61421630156574720 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:47:37.790 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61421630156574720 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:47:37.790 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61421630156574720 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:47:37.791 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61421630156574720 [0;39m 请求参数: [{"loginname":"dio","role":"teacher"}]
+2021-06-19 19:47:37.792 INFO  rainclassv3.controller.UserController             :35   [32m61421630156574720 [0;39m 传入的密码信息为:123
+2021-06-19 19:47:37.792 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61421630156574720 [0;39m 登录的角色为:teacher
+2021-06-19 19:47:37.895 INFO  rainclassv3.service.impl.UserServiceImpl          :79   [32m61421630156574720 [0;39m 查询出的教师信息为:[Teacher [Hash = 458050634, id=1, loginname=dio, realname=dio, password=123, email=null, createtime=null, logintime=null]]
+2021-06-19 19:47:37.909 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61421630156574720 [0;39m 返回结果: {"content":{"id":1,"loginname":"dio","realname":"dio","role":"teacher"},"success":true}
+2021-06-19 19:47:37.910 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61421630156574720 [0;39m ------------- 结束 耗时：122 ms -------------
+2021-06-19 19:47:46.538 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61421666856734720 [0;39m ------------- 开始 -------------
+2021-06-19 19:47:46.538 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61421666856734720 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:47:46.539 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61421666856734720 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:47:46.539 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61421666856734720 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:47:46.539 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61421666856734720 [0;39m 请求参数: [{"loginname":"dio","role":"student"}]
+2021-06-19 19:47:46.540 INFO  rainclassv3.controller.UserController             :35   [32m61421666856734720 [0;39m 传入的密码信息为:123
+2021-06-19 19:47:46.540 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61421666856734720 [0;39m 登录的角色为:student
+2021-06-19 19:47:46.642 WARN  rainclassv3.controller.ControllerExceptionHandler :54   [32m61421666856734720 [0;39m 业务异常：用户名不存在或密码错误
+2021-06-19 19:47:46.645 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61421666856734720 [0;39m Resolved [rainclassv3.exception.BusinessException: 用户名不存在或密码错误]
+2021-06-19 19:50:08.368 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61422261730676736 [0;39m ------------- 开始 -------------
+2021-06-19 19:50:08.372 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61422261730676736 [0;39m 请求地址: http://127.0.0.1:9000/user/login POST
+2021-06-19 19:50:08.373 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61422261730676736 [0;39m 类名方法: rainclassv3.controller.UserController.login
+2021-06-19 19:50:08.373 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61422261730676736 [0;39m 远程地址: 127.0.0.1
+2021-06-19 19:50:08.374 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61422261730676736 [0;39m 请求参数: [{"loginname":"dio","role":"teacher"}]
+2021-06-19 19:50:08.374 INFO  rainclassv3.controller.UserController             :35   [32m61422261730676736 [0;39m 传入的密码信息为:123
+2021-06-19 19:50:08.374 INFO  rainclassv3.service.impl.UserServiceImpl          :56   [32m61422261730676736 [0;39m 登录的角色为:teacher
+2021-06-19 19:50:08.489 INFO  rainclassv3.service.impl.UserServiceImpl          :79   [32m61422261730676736 [0;39m 查询出的教师信息为:[Teacher [Hash = 1050334688, id=1, loginname=dio, realname=dio, password=123, email=null, createtime=null, logintime=null]]
+2021-06-19 19:50:08.497 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61422261730676736 [0;39m 返回结果: {"content":{"id":1,"loginname":"dio","realname":"dio","role":"teacher"},"success":true}
+2021-06-19 19:50:08.498 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61422261730676736 [0;39m ------------- 结束 耗时：131 ms -------------
