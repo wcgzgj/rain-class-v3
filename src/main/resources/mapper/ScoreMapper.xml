@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="rainclassv3.mapper.ScoreMapper">
+  <resultMap id="BaseResultMap" type="rainclassv3.pojo.Score">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="studentid" jdbcType="BIGINT" property="studentid" />
+    <result column="classid" jdbcType="BIGINT" property="classid" />
+    <result column="scorenum" jdbcType="REAL" property="scorenum" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, studentid, classid, scorenum, createtime
+  </sql>
+  <select id="selectByExample" parameterType="rainclassv3.pojo.ScoreExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from score
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from score
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from score
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="rainclassv3.pojo.ScoreExample">
+    delete from score
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="rainclassv3.pojo.Score">
+    insert into score (id, studentid, classid, 
+      scorenum, createtime)
+    values (#{id,jdbcType=BIGINT}, #{studentid,jdbcType=BIGINT}, #{classid,jdbcType=BIGINT}, 
+      #{scorenum,jdbcType=REAL}, #{createtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="rainclassv3.pojo.Score">
+    insert into score
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="studentid != null">
+        studentid,
+      </if>
+      <if test="classid != null">
+        classid,
+      </if>
+      <if test="scorenum != null">
+        scorenum,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="studentid != null">
+        #{studentid,jdbcType=BIGINT},
+      </if>
+      <if test="classid != null">
+        #{classid,jdbcType=BIGINT},
+      </if>
+      <if test="scorenum != null">
+        #{scorenum,jdbcType=REAL},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="rainclassv3.pojo.ScoreExample" resultType="java.lang.Long">
+    select count(*) from score
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update score
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.studentid != null">
+        studentid = #{record.studentid,jdbcType=BIGINT},
+      </if>
+      <if test="record.classid != null">
+        classid = #{record.classid,jdbcType=BIGINT},
+      </if>
+      <if test="record.scorenum != null">
+        scorenum = #{record.scorenum,jdbcType=REAL},
+      </if>
+      <if test="record.createtime != null">
+        createtime = #{record.createtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update score
+    set id = #{record.id,jdbcType=BIGINT},
+      studentid = #{record.studentid,jdbcType=BIGINT},
+      classid = #{record.classid,jdbcType=BIGINT},
+      scorenum = #{record.scorenum,jdbcType=REAL},
+      createtime = #{record.createtime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="rainclassv3.pojo.Score">
+    update score
+    <set>
+      <if test="studentid != null">
+        studentid = #{studentid,jdbcType=BIGINT},
+      </if>
+      <if test="classid != null">
+        classid = #{classid,jdbcType=BIGINT},
+      </if>
+      <if test="scorenum != null">
+        scorenum = #{scorenum,jdbcType=REAL},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="rainclassv3.pojo.Score">
+    update score
+    set studentid = #{studentid,jdbcType=BIGINT},
+      classid = #{classid,jdbcType=BIGINT},
+      scorenum = #{scorenum,jdbcType=REAL},
+      createtime = #{createtime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
