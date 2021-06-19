@@ -28,7 +28,7 @@
             </template>
             <a-list-item-meta :description="'课程介绍'">
               <template #title>
-                <router-link to="/classinfo">
+                <router-link :to="'/classinfo?id='+item.id">
                   {{ item.classname }}
                 </router-link>
               </template>

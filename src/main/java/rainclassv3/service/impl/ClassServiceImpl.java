@@ -87,4 +87,27 @@ public class ClassServiceImpl implements ClassService {
     public int save(ClassSaveReq req) {
         return -1;
     }
+
+
+    /**
+     * 根据 id 查询课程信息
+     * @param id
+     * @return
+     */
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+    @Override
+    public ClassQueryResp selectById(Long id) {
+        /**
+         * 查出课程信息
+         */
+        Class aClass = classMapper.selectByPrimaryKey(id);
+        ClassQueryResp classQueryResp = CopyUtil.copy(aClass, ClassQueryResp.class);
+
+        /**
+         * 查出该课程的教师信息
+         */
+        Teacher teacher = teacherMapper.selectByPrimaryKey(classQueryResp.getTeacherid());
+        classQueryResp.setTeacher(teacher);
+        return classQueryResp;
+    }
 }

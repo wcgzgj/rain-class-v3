@@ -38,4 +38,11 @@ public interface ClassService {
      * @return
      */
     int save(ClassSaveReq req);
+
+    /**
+     * 根据 id 查询课程信息
+     * @param id
+     * @return
+     */
+    ClassQueryResp selectById(Long id);
 }

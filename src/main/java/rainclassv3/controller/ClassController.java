@@ -1,11 +1,9 @@
 package rainclassv3.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import rainclassv3.pojo.Class;
 import rainclassv3.req.ClassQueryReq;
+import rainclassv3.resp.ClassQueryResp;
 import rainclassv3.resp.CommonResp;
 import rainclassv3.resp.PageResp;
 import rainclassv3.service.ClassService;
@@ -41,9 +39,35 @@ public class ClassController {
         return commonResp;
     }
 
+    /**
+     * 查询全部接口
+     * @return
+     */
     @GetMapping("/all")
     public List<Class> all() {
         return classService.getAll();
+    }
+
+
+    /**
+     * 根据 id ，查询信息
+     * @param id
+     * @return
+     */
+    @GetMapping("/selectById/{id}")
+    public CommonResp selectById(@PathVariable("id") String id) {
+        Long classId=null;
+        try {
+            classId = Long.valueOf(id);
+        } catch (Exception e) {
+            throw new RuntimeException("课程查询错误");
+        }
+        ClassQueryResp classQueryResp = classService.selectById(classId);
+
+
+        CommonResp commonResp = new CommonResp();
+        commonResp.setContent(classQueryResp);
+        return commonResp;
     }
 
 }

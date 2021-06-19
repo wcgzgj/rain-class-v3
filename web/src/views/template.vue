@@ -15,12 +15,21 @@
     import { message } from 'ant-design-vue';
     import {computed} from "@vue/reactivity";
     import store from "@/store";
+    import axios from 'axios';
+    import {useRoute} from "vue-router";
 
     export default defineComponent({
         name: 'template',
         setup() {
+            const route = useRoute();
 
             const user = computed(() => store.state.user);
+
+            /**
+             * 下面，是 router 的使用方法
+             * 可以在 url 中获取传入的参数
+             */
+            //axios.get("/doc/all/"+route.query.ebookId)
 
             return {
 
