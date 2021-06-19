@@ -1,4 +1,4 @@
-<!--学生已选课表-->
+<!--老师的课程列表-->
 <template>
     <a-layout-content :style="{ padding: '0 50px', marginTop: '64px' }">
         <a-breadcrumb :style="{ margin: '16px 0' }"><!--面包屑导航目前做不了，就把空间先留下了--></a-breadcrumb>
@@ -32,7 +32,8 @@
                         <a-list-item-meta :description="item.description">
                             <template #title>
                                 <a :href="item.href">
-                                    <router-link to="/studentChosenClass">
+                                    <!--需要带入课程的 id ，然后通过课程的 id 去查询该教师、该课程的信息-->
+                                    <router-link to="/teacherClassInfo">
                                         {{ item.title }}
                                     </router-link>
                                 </a>
@@ -43,7 +44,6 @@
                 </template>
             </a-list>
 
-
         </div>
     </a-layout-content>
 </template>
@@ -51,11 +51,9 @@
 <script>
     import { defineComponent,ref } from 'vue';
     import {Tool} from "@/util/Tool";
-    import { message } from 'ant-design-vue';
-    import {computed} from "@vue/reactivity";
-    import store from "@/store";
+    import {message} from "ant-design-vue";
+    import {AxiosInstance as axios} from "axios";
     import {onMounted} from "@vue/runtime-core";
-
 
     const listData = [];
 
@@ -72,10 +70,9 @@
     }
 
     export default {
-        name: "StudentChosenList",
-        setup() {
+        name: "TeacherClassList",
 
-            const user = computed(() => store.state.user);
+        setup() {
 
             /**
              * 分页
@@ -94,6 +91,10 @@
              */
             const searchValue = ref("");
 
+            /**
+             * 学生选课的页面，需要区别搜索
+             * 该学生已经选过的科目，就不要显示了
+             */
             const onSearch = (pageNum) => {
                 console.log(pageNum);
                 console.log(pagination.pageSize);
@@ -121,13 +122,14 @@
                 onSearch(1);
             });
 
+
             return {
                 searchValue,
                 listData,
                 pagination,
                 onSearch
             };
-        },
+        }
     }
 </script>
 

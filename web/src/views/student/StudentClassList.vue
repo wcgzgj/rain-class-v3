@@ -4,6 +4,8 @@
         <a-breadcrumb :style="{ margin: '16px 0' }"><!--面包屑导航目前做不了，就把空间先留下了--></a-breadcrumb>
         <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
+            <p style="font-size: 30px">全部课程</p>
+
             <a-input-search
                     v-model:value="searchValue"
                     placeholder="请输入课程名称"
@@ -87,6 +89,10 @@
              */
             const searchValue = ref("");
 
+            /**
+             * 学生选课的页面，需要区别搜索
+             * 该学生已经选过的科目，就不要显示了
+             */
             const onSearch = (pageNum) => {
                 console.log(pageNum);
                 console.log(pagination.pageSize);

@@ -55,14 +55,16 @@
             <!--老师操作下拉框-->
             <a-sub-menu key="tea">
                 <template #title>
-            <span>
-              <span>老师</span>
-            </span>
+                    <span>
+                      <span>老师</span>
+                    </span>
                 </template>
-                <a-menu-item key="t1">成绩导入</a-menu-item>
-                <a-menu-item key="t2">成绩分析</a-menu-item>
-                <a-menu-item key="t3">成绩预警</a-menu-item>
-                <a-menu-item key="t4">成绩通知</a-menu-item>
+                <!--点开来后，显示该教师所需要教授的全部课程-->
+                <a-menu-item key="t1">成绩管理</a-menu-item>
+                <!--展示老师对学生的评价信息-->
+                <a-menu-item key="t2">我的评价</a-menu-item>
+                <!--<a-menu-item key="t3">成绩预警</a-menu-item>-->
+                <!--<a-menu-item key="t4">成绩通知</a-menu-item>-->
             </a-sub-menu>
 
 
@@ -101,7 +103,11 @@
             </span>
                 </template>
                 <a-menu-item key="u1" :onclick="logout">注销登录</a-menu-item>
-                <a-menu-item key="u2">密码重置</a-menu-item>
+                <a-menu-item key="u2">
+                    <router-link to="/resetPassword">
+                        密码重置
+                    </router-link>
+                </a-menu-item>
                 <a-menu-item key="u3">个人信息</a-menu-item>
             </a-sub-menu>
 
@@ -118,6 +124,31 @@
             cancel-text="取消"
             @ok="login">
         <a-form :model="loginUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+            <a-form-item label="用户名">
+                <a-input v-model:value="loginUser.loginname" />
+            </a-form-item>
+            <a-form-item label="密码">
+                <a-input v-model:value="loginUser.password" type="password"/>
+            </a-form-item>
+            <a-form-item label="身份选择">
+                <a-radio-group v-model:value="loginUser.role" button-style="solid">
+                    <a-radio-button value="student">学生</a-radio-button>
+                    <a-radio-button value="teacher">老师</a-radio-button>
+                    <a-radio-button value="admin">管理员</a-radio-button>
+                </a-radio-group>
+            </a-form-item>
+        </a-form>
+    </a-modal>
+
+
+
+    <a-modal
+            v-model:visible="loginVisible"
+            title="注册"
+            ok-text="确认"
+            cancel-text="取消"
+            @ok="login">
+        <a-form :model="registerUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
             <a-form-item label="用户名">
                 <a-input v-model:value="loginUser.loginname" />
             </a-form-item>
@@ -161,6 +192,16 @@
                 password:"",
                 role:"student"
             });
+
+            /**
+             * 需要加入邮箱验证
+             */
+            const registerUser = ref({
+                loginname:"",
+                realname:"",
+                password:"",
+                //...
+            })
 
             const showLogin = () => {
                 loginVisible.value = true;
