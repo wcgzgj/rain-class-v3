@@ -175,7 +175,7 @@ public class StudentServiceImpl implements StudentService {
      */
     @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
     @Override
-    public List<StudentMyScoreResp> getMyScore(StudentMyScoreReq req) {
+    public PageResp getMyScore(StudentMyScoreReq req) {
         long studentId = Long.parseLong(req.getStudentid());
         ScoreExample scoreExample = new ScoreExample();
         scoreExample.createCriteria().andStudentidEqualTo(studentId);
@@ -190,6 +190,12 @@ public class StudentServiceImpl implements StudentService {
             studentMyScoreResps.add(studentMyScoreResp);
         }
 
-        return studentMyScoreResps;
+        PageResp pageResp = new PageResp();
+        pageResp.setPageNum(req.getPageNum());
+        pageResp.setPageSize(req.getPageSize());
+        pageResp.setTotal(studentMyScoreResps.size());
+        pageResp.setList(studentMyScoreResps);
+
+        return pageResp;
     }
 }

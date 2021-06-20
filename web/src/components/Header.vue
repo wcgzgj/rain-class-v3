@@ -50,6 +50,12 @@
                         选课结果查询
                     </router-link>
                 </a-menu-item>
+                <a-menu-item key="s3">
+                    <router-link to="/studentScore">
+                        我的成绩
+                    </router-link>
+                </a-menu-item>
+
             </a-sub-menu>
 
             <!--老师操作下拉框-->

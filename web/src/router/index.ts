@@ -7,6 +7,7 @@ import ClassInfo from '../views/class/ClassInfo.vue'
 import StudentClassList from '../views/student/StudentClassList.vue'
 import StudentChosenList from '../views/student/StudentChosenList.vue'
 import StudentChosenClass from '../views/student/StudentChosenClass.vue'
+import StudentScore from '../views/student/StudentScore.vue'
 import TeacherClassInfo from '../views/teacher/TeacherClassInfo.vue'
 import TeacherClassList from '../views/teacher/TeacherClassList.vue'
 import TeacherComment from '../views/teacher/TeacherComment.vue'
@@ -52,6 +53,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/studentChosenClass',
     name: 'StudentChosenClass',
     component: StudentChosenClass
+  },
+  {
+    path: '/studentScore',
+    name: 'StudentScore',
+    component: StudentScore
   },
   {
     path: '/teacherClassInfo',

@@ -102,9 +102,10 @@ public class StudentController {
      * 学生 获取我的成绩接口
      * @return
      */
-    @RequestMapping("/myScore")
+    @GetMapping("/myScore")
     public CommonResp myScore(StudentMyScoreReq req) {
-        List<StudentMyScoreResp> myScore = studentService.getMyScore(req);
+        PageResp myScore = studentService.getMyScore(req);
+        LOG.info("查询到的学生成绩信息为:{}",myScore);
         CommonResp commonResp = new CommonResp();
         commonResp.setContent(myScore);
         return commonResp;

@@ -43,5 +43,5 @@ public interface StudentService {
      * @param req
      * @return
      */
-    List<StudentMyScoreResp> getMyScore(StudentMyScoreReq req);
+    PageResp getMyScore(StudentMyScoreReq req);
 }
