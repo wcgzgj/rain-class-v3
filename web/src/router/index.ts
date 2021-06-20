@@ -7,6 +7,8 @@ import ClassInfo from '../views/class/ClassInfo.vue'
 import StudentClassList from '../views/student/StudentClassList.vue'
 import StudentChosenList from '../views/student/StudentChosenList.vue'
 import StudentChosenClass from '../views/student/StudentChosenClass.vue'
+import TeacherClassInfo from '../views/teacher/TeacherClassInfo.vue'
+import TeacherClassList from '../views/teacher/TeacherClassList.vue'
 import ResetPassword from '../views/user/ResetPassword.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -49,6 +51,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/studentChosenClass',
     name: 'StudentChosenClass',
     component: StudentChosenClass
+  },
+  {
+    path: '/teacherClassInfo',
+    name: 'TeacherClassInfo',
+    component: TeacherClassInfo
+  },
+  {
+    path: '/teacherClassList',
+    name: 'TeacherClassList',
+    component: TeacherClassList
   },
   {
     path: '/resetPassword',

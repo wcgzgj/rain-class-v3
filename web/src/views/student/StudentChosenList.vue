@@ -14,7 +14,7 @@
             <!--        @search="onSearch"-->
             <!--/>-->
 
-            <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData">
+            <a-list item-layout="vertical" size="large" :pagination="pagination" :loading="loading" :data-source="listData">
                 <template #footer>
                     <div>
                         <p style="text-align: center">课程列表</p>
@@ -58,6 +58,7 @@
     export default {
         name: "StudentChosenList",
         setup() {
+            const loading=ref(true);
 
             const user = computed(() => store.state.user);
 
@@ -101,6 +102,7 @@
                         studentid:user.value.id,
                     }
                 }).then(resp => {
+                    loading.value=false;
                     const data = resp.data;
                     if (data.success) {
                         const pageInfo = data.content;
@@ -128,7 +130,8 @@
                 pagination,
                 onSearch,
                 searchForm,
-                user
+                user,
+                loading
             };
         }
     }

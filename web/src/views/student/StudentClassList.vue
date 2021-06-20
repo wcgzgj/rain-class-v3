@@ -14,7 +14,7 @@
                     @search="onSearch"
             />
 
-            <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData">
+            <a-list item-layout="vertical" size="large" :loading="loading" :pagination="pagination"  :data-source="listData">
                 <template #footer>
                     <div>
                         <p style="text-align: center">课程列表</p>
@@ -76,6 +76,8 @@
 
             const listData = ref();
 
+            const loading = ref(true);
+
             const searchForm = ref({
                 pageNum: 1,
                 pageSize: 3,
@@ -93,6 +95,7 @@
                         classname:searchForm.value.classname
                     }
                 }).then(resp => {
+                    loading.value=false;
                     const data = resp.data;
                     if (data.success) {
                         const pageInfo = data.content;
@@ -119,7 +122,8 @@
                 listData,
                 pagination,
                 onSearch,
-                searchForm
+                searchForm,
+                loading
             };
         }
     }

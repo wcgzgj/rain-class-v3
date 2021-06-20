@@ -60,7 +60,11 @@
                     </span>
                 </template>
                 <!--点开来后，显示该教师所需要教授的全部课程-->
-                <a-menu-item key="t1">成绩管理</a-menu-item>
+                <a-menu-item key="t1">
+                    <router-link to="/teacherClassList">
+                        成绩管理
+                    </router-link>
+                </a-menu-item>
                 <!--展示老师对学生的评价信息-->
                 <a-menu-item key="t2">我的评价</a-menu-item>
                 <!--<a-menu-item key="t3">成绩预警</a-menu-item>-->
