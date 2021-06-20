@@ -689,3 +689,5 @@ java.net.UnknownHostException: r-uf6eadbd897d91e4pd.redis.rds.aliyuncs.com
 2021-06-20 11:49:29.236 INFO  io.lettuce.core.protocol.ReconnectionHandler      :164  [32m                  [0;39m Reconnected to r-uf6eadbd897d91e4pd.redis.rds.aliyuncs.com:6379
 2021-06-20 11:52:29.148 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m56s147ms).
 2021-06-20 12:33:31.396 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m33s23ms).
+2021-06-20 13:16:29.974 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m58s432ms).
+2021-06-20 13:27:49.277 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m19s249ms).

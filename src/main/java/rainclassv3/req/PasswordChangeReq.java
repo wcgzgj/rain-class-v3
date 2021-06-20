@@ -1,5 +1,9 @@
 package rainclassv3.req;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * @ClassName PasswordChangeReq
  * @Description TODO
@@ -7,6 +11,9 @@ package rainclassv3.req;
  * @Date 2021/6/19 下午8:54
  * @Version 1.0
  **/
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class PasswordChangeReq {
     /**
      * 用户id

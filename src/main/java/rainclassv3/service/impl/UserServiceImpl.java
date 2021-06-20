@@ -9,6 +9,7 @@ import rainclassv3.mapper.AdminMapper;
 import rainclassv3.mapper.StudentMapper;
 import rainclassv3.mapper.TeacherMapper;
 import rainclassv3.pojo.*;
+import rainclassv3.req.PasswordChangeReq;
 import rainclassv3.req.UserLoginReq;
 import rainclassv3.resp.AdminLoginResp;
 import rainclassv3.resp.StudentLoginResp;
@@ -104,5 +105,26 @@ public class UserServiceImpl implements UserService {
         }
 
         return loginResp;
+    }
+
+
+
+    /**
+     * 更改密码
+     *
+     * @param req
+     */
+    @Override
+    public void changePassword(PasswordChangeReq req) {
+        String role = req.getRole();
+        switch (role) {
+            case "student":
+                // req.get
+                break;
+            case "teacher":
+                break;
+            case "admin":
+                break;
+        }
     }
 }
