@@ -21,7 +21,11 @@
 
                 </a-col>
                 <a-col :span="5">
-                    <a-button type="primary" size="large">新增课程</a-button>
+                    <a-button type="primary" size="large">
+                        <router-link to="/adminClassAdd">
+                            新增课程
+                        </router-link>
+                    </a-button>
                 </a-col>
             </a-row>
 
