@@ -6,13 +6,13 @@
 
             <p style="font-size: 30px">我的课程</p>
 
-            <a-input-search
-                    v-model:value="searchValue"
-                    placeholder="请输入课程名称"
-                    enter-button="搜索"
-                    size="large"
-                    @search="onSearch"
-            />
+            <!--<a-input-search-->
+            <!--        v-model:value="searchForm.classname"-->
+            <!--        placeholder="请输入课程名称"-->
+            <!--        enter-button="搜索"-->
+            <!--        size="large"-->
+            <!--        @search="onSearch"-->
+            <!--/>-->
 
             <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData">
                 <template #footer>
@@ -29,20 +29,17 @@
                                     src="../../assets/ds.jpg"
                             />
                         </template>
-                        <a-list-item-meta :description="item.description">
+                        <a-list-item-meta :description="'课程介绍'">
                             <template #title>
-                                <a :href="item.href">
-                                    <router-link to="/studentChosenClass">
-                                        {{ item.title }}
-                                    </router-link>
-                                </a>
+                                <router-link :to="'/studentChosenClass?id='+item.id">
+                                    {{ item.classname }}
+                                </router-link>
                             </template>
                         </a-list-item-meta>
-                        {{ item.content }}
+                        {{ item.desc }}
                     </a-list-item>
                 </template>
             </a-list>
-
 
         </div>
     </a-layout-content>
@@ -55,21 +52,8 @@
     import {computed} from "@vue/reactivity";
     import store from "@/store";
     import {onMounted} from "@vue/runtime-core";
+    import axios from "axios";
 
-
-    const listData = [];
-
-    for (let i = 0; i < 23; i++) {
-        listData.push({
-            title: `数据结构 ${i}`,
-            description:
-                '数据结构介绍',
-            content:
-                '数据结构（英语：data structure）是计算机中存储、组织数据的方式。\n' +
-                '\n' +
-                '数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。',
-        });
-    }
 
     export default {
         name: "StudentChosenList",
@@ -82,6 +66,7 @@
              */
             const pagination = {
                 onChange: page => {
+                    searchForm.value.pageNum=page;
                     onSearch(page);
                 },
                 pageSize: 3,
@@ -92,42 +77,60 @@
              * 搜索
              * @type {Ref<UnwrapRef<string>>}
              */
-            const searchValue = ref("");
+
+            const listData = ref();
+
+            const searchForm = ref({
+                pageNum: 1,
+                pageSize: 3,
+                classname: ""
+            });
 
             const onSearch = (pageNum) => {
                 console.log(pageNum);
-                console.log(pagination.pageSize);
-                // axios.get("/class/list",{
-                //   pageNum: pageNum,
-                //   pageSize: pagination.pageSize,
-                //   name: searchValue.value
-                // },{
-                //   timeout:5000
-                // }).then(resp => {
-                //   const data = resp.data;
-                //   if (data.success) {
-                //     /**
-                //      * 为 dataList 赋值
-                //      * 同时修改 pagination 的 total 值
-                //      */
-                //
-                //   } else {
-                //     message.error(data.message);
-                //   }
-                // })
+                console.log(searchForm.value.pageSize);
+
+                /**
+                 * 查询出所有  该学生已经选择的课程
+                 */
+                axios.get("/student/myClass",{
+                    params:{
+                        pageNum:searchForm.value.pageNum,
+                        pageSize:searchForm.value.pageSize,
+                        classname:searchForm.value.classname,
+                        studentid:user.value.id,
+                    }
+                }).then(resp => {
+                    const data = resp.data;
+                    if (data.success) {
+                        const pageInfo = data.content;
+                        /**
+                         * 为 dataList 赋值
+                         * 同时修改 pagination 的 total 值
+                         */
+                        listData.value=pageInfo.list;
+                        pagination.pageSize=pageInfo.pageSize;
+                        pagination.total=pageInfo.total;
+
+                    } else {
+                        message.error(data.message);
+                    }
+                })
             }
 
             onMounted(()=>{
                 onSearch(1);
             });
 
+
             return {
-                searchValue,
                 listData,
                 pagination,
-                onSearch
+                onSearch,
+                searchForm,
+                user
             };
-        },
+        }
     }
 </script>
 

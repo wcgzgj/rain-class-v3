@@ -1,6 +1,7 @@
 <template>
   <a-layout-content :style="{ padding: '0 50px', marginTop: '64px' }">
     <a-breadcrumb :style="{ margin: '16px 0' }"><!--面包屑导航目前做不了，就把空间先留下了--></a-breadcrumb>
+
     <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
       <p style="font-size: 30px">课程列表</p>
@@ -13,34 +14,38 @@
               @search="onSearch"
       />
 
-      <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData">
-        <template #footer>
-          <div>
-            <p style="text-align: center">课程列表</p>
-          </div>
-        </template>
-        <template #renderItem="{ item }">
-          <a-list-item key="item.title">
-            <template #extra>
-              <img
-                      width="200"
-                      alt="logo"
-                      src="../assets/ds.jpg"
-              />
-            </template>
-            <a-list-item-meta :description="'课程介绍'">
-              <template #title>
-                <router-link :to="'/classinfo?id='+item.id">
-                  {{ item.classname }}
-                </router-link>
+      <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData" :loading="spinning">
+          <template #footer>
+            <div>
+              <p style="text-align: center">课程列表</p>
+            </div>
+          </template>
+          <template #renderItem="{ item }">
+            <a-list-item key="item.title">
+              <template #extra>
+                <img
+                        width="200"
+                        alt="logo"
+                        src="../assets/ds.jpg"
+                />
               </template>
-            </a-list-item-meta>
-            {{ item.desc }}
-          </a-list-item>
-        </template>
-      </a-list>
+              <a-list-item-meta :description="'课程介绍'">
+                <template #title>
+                  <router-link :to="'/classinfo?id='+item.id">
+                    {{ item.classname }}
+                  </router-link>
+                </template>
+              </a-list-item-meta>
+              {{ item.desc }}
+            </a-list-item>
+          </template>
+        </a-list >
+
+
 
     </div>
+
+
   </a-layout-content>
 
 </template>
@@ -56,12 +61,14 @@ import {onMounted} from "@vue/runtime-core";
 export default defineComponent({
   name: 'Home',
   setup() {
+    const spinning = ref(true);
 
     /**
      * 分页
      */
     const pagination = {
       onChange: page => {
+        spinning.value=true;
         searchForm.value.pageNum=page;
         onSearch(page);
       },
@@ -85,6 +92,7 @@ export default defineComponent({
     const onSearch = (pageNum) => {
       console.log(pageNum);
       console.log(searchForm.value.pageSize);
+      spinning.value=false;
 
       axios.get("/class/list",{
         params:{
@@ -119,7 +127,8 @@ export default defineComponent({
       listData,
       pagination,
       onSearch,
-      searchForm
+      searchForm,
+      spinning
     };
   }
 

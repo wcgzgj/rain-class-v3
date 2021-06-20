@@ -4,6 +4,11 @@
         <a-breadcrumb :style="{ margin: '16px 0' }"><!--面包屑导航目前做不了，就把空间先留下了--></a-breadcrumb>
         <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
+            <a-spin :spinning="spinning">
+
+
+
+            </a-spin>
 
         </div>
     </a-layout-content>

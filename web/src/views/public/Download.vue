@@ -4,15 +4,14 @@
         <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
 
-
             <a-list :grid="{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 6, xxl: 3 }" :data-source="data" :pagination="pagination">
                 <template #renderItem="{ item }">
                     <a-list-item>
-                        <a-card :title="item.title">
-                            <router-link to="">
+                        <router-link to="">
+                            <a-card :title="item.title">
                                 Microsoft Word
-                            </router-link>
-                        </a-card>
+                            </a-card>
+                        </router-link>
                     </a-list-item>
                 </template>
             </a-list>
