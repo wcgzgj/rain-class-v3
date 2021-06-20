@@ -37,5 +37,5 @@ public class ClassSaveReq {
 
     private String desc;
 
-    private Date createtime;
+    private String path;
 }

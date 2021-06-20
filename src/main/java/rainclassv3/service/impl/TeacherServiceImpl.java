@@ -149,4 +149,15 @@ public class TeacherServiceImpl implements TeacherService {
         dbScore.setScorenum(score);
         scoreMapper.updateByPrimaryKeySelective(dbScore);
     }
+
+    /**
+     * 获取所有教师信息
+     *
+     * @return
+     */
+    @Override
+    public List<Teacher> getAll() {
+        List<Teacher> teachers = teacherMapper.selectByExample(null);
+        return teachers;
+    }
 }

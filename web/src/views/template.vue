@@ -31,6 +31,14 @@
 
             const user = computed(() => store.state.user);
 
+
+            /**
+             * 展示图片的基础路径
+             */
+            const basePicPath=ref("");
+            basePicPath.value+=process.env.VUE_APP_SERVER+"/disPic/";
+
+
             /**
              * 下面，是 router 的使用方法
              * 可以在 url 中获取传入的参数

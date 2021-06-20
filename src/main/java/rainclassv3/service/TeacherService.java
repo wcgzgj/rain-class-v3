@@ -1,5 +1,6 @@
 package rainclassv3.service;
 
+import rainclassv3.pojo.Teacher;
 import rainclassv3.req.TeacherChangeScoreReq;
 import rainclassv3.req.TeacherMyClassQueryReq;
 import rainclassv3.req.TeacherMyStudentReq;
@@ -33,4 +34,11 @@ public interface TeacherService {
      * @param req
      */
     void changeScore(TeacherChangeScoreReq req);
+
+
+    /**
+     * 获取所有教师信息
+     * @return
+     */
+    List<Teacher> getAll();
 }

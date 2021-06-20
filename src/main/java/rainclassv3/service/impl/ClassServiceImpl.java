@@ -2,9 +2,14 @@ package rainclassv3.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
+import rainclassv3.exception.FileException;
+import rainclassv3.exception.FileExceptionCode;
 import rainclassv3.mapper.ClassMapper;
 import rainclassv3.mapper.TeacherMapper;
 import rainclassv3.pojo.Class;
@@ -14,11 +19,16 @@ import rainclassv3.req.ClassQueryReq;
 import rainclassv3.req.ClassSaveReq;
 import rainclassv3.resp.ClassQueryResp;
 import rainclassv3.resp.PageResp;
+import rainclassv3.resp.PicUploadResp;
 import rainclassv3.service.ClassService;
 import rainclassv3.util.CopyUtil;
+import rainclassv3.util.FileUtil;
 import rainclassv3.util.SnowFlake;
+import rainclassv3.util.ValidType;
 
 import javax.annotation.Resource;
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
@@ -40,6 +50,8 @@ public class ClassServiceImpl implements ClassService {
 
     @Resource
     private SnowFlake snowFlake;
+
+    private static final Logger LOG= LoggerFactory.getLogger(ClassServiceImpl.class);
 
     /**
      * 分页、模糊查询
@@ -127,5 +139,61 @@ public class ClassServiceImpl implements ClassService {
         Teacher teacher = teacherMapper.selectByPrimaryKey(classQueryResp.getTeacherid());
         classQueryResp.setTeacher(teacher);
         return classQueryResp;
+    }
+
+    /**
+     * 课程图片上传
+     *
+     * @param file
+     * @return
+     */
+    @Override
+    public PicUploadResp upload(MultipartFile file) {
+        String path = "/Users/faro_z/Pictures/cover";
+        String originalFilename = file.getOriginalFilename();
+
+        LOG.info("获取的文件名为:{}",originalFilename);
+        /**
+         * 获取文件后缀
+         */
+        String hz = originalFilename.substring(originalFilename.lastIndexOf("."));
+
+        LOG.info("获取的文件后缀为:{}",hz);
+
+
+        //判断图片后缀是否合法
+        boolean valid = FileUtil.isHzValid(hz, ValidType.PIC);
+        if (!valid) {
+            throw new FileException(FileExceptionCode.FILE_TYPE_ERROR);
+        }
+
+        String newFileName = String.valueOf(snowFlake.nextId())+hz;
+        StringBuilder sb = new StringBuilder();
+        sb.append(path)
+                .append("/")
+                .append(newFileName);
+        String newPath = sb.toString();
+        try {
+            file.transferTo(new File(newPath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Long newPicId = snowFlake.nextId();
+        // Pic pic = new Pic();
+        // pic.setId(newPicId);
+        // LOG.info("待插入的图片主键为",pic.getId());
+        // pic.setPath(newFileName);
+        // picMapper.insertSelective(pic);
+
+
+        /**
+         * 需要将保存后的图片名称，和图片 id 返回出去
+         */
+        PicUploadResp picUploadResp = new PicUploadResp();
+        picUploadResp.setPath(newFileName);
+        picUploadResp.setShowPath("http://127.0.0.1:9000/disPic/"+newFileName);
+
+        return picUploadResp;
     }
 }

@@ -13,6 +13,7 @@
     <result column="credit" jdbcType="INTEGER" property="credit" />
     <result column="desc" jdbcType="VARCHAR" property="desc" />
     <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="path" jdbcType="VARCHAR" property="path" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -74,7 +75,7 @@
   </sql>
   <sql id="Base_Column_List">
     id, classname, teacherid, starttime, code, place, notice, `type`, credit, `desc`, 
-    createtime
+    createtime, `path`
   </sql>
   <select id="selectByExample" parameterType="rainclassv3.pojo.ClassExample" resultMap="BaseResultMap">
     select
@@ -110,11 +111,13 @@
     insert into class (id, classname, teacherid, 
       starttime, code, place, 
       notice, `type`, credit, 
-      `desc`, createtime)
+      `desc`, createtime, `path`
+      )
     values (#{id,jdbcType=BIGINT}, #{classname,jdbcType=VARCHAR}, #{teacherid,jdbcType=BIGINT}, 
       #{starttime,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{place,jdbcType=VARCHAR}, 
       #{notice,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{credit,jdbcType=INTEGER}, 
-      #{desc,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP})
+      #{desc,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{path,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="rainclassv3.pojo.Class">
     insert into class
@@ -152,6 +155,9 @@
       <if test="createtime != null">
         createtime,
       </if>
+      <if test="path != null">
+        `path`,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -186,6 +192,9 @@
       </if>
       <if test="createtime != null">
         #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="path != null">
+        #{path,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -231,6 +240,9 @@
       <if test="record.createtime != null">
         createtime = #{record.createtime,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.path != null">
+        `path` = #{record.path,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -248,7 +260,8 @@
       `type` = #{record.type,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=INTEGER},
       `desc` = #{record.desc,jdbcType=VARCHAR},
-      createtime = #{record.createtime,jdbcType=TIMESTAMP}
+      createtime = #{record.createtime,jdbcType=TIMESTAMP},
+      `path` = #{record.path,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -286,6 +299,9 @@
       <if test="createtime != null">
         createtime = #{createtime,jdbcType=TIMESTAMP},
       </if>
+      <if test="path != null">
+        `path` = #{path,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -300,7 +316,8 @@
       `type` = #{type,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=INTEGER},
       `desc` = #{desc,jdbcType=VARCHAR},
-      createtime = #{createtime,jdbcType=TIMESTAMP}
+      createtime = #{createtime,jdbcType=TIMESTAMP},
+      `path` = #{path,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

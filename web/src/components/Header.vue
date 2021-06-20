@@ -91,9 +91,17 @@
                 </template>
                 <a-menu-item key="a1">学生管理</a-menu-item>
                 <a-menu-item key="a2">教师管理</a-menu-item>
-                <a-menu-item key="a3">课程管理</a-menu-item>
+                <a-menu-item key="a3">
+                    <router-link to="/adminClassList">
+                        课程管理
+                    </router-link>
+                </a-menu-item>
                 <a-menu-item key="a4">资源管理</a-menu-item>
-                <a-menu-item key="a5">评论管理</a-menu-item>
+                <a-menu-item key="a5">
+                    <router-link to="/adminComment">
+                        评论管理
+                    </router-link>
+                </a-menu-item>
             </a-sub-menu>
 
 

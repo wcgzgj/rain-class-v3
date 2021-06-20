@@ -25,6 +25,8 @@ public class Class {
 
     private Date createtime;
 
+    private String path;
+
     public Long getId() {
         return id;
     }
@@ -113,6 +115,14 @@ public class Class {
         this.createtime = createtime;
     }
 
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -130,6 +140,7 @@ public class Class {
         sb.append(", credit=").append(credit);
         sb.append(", desc=").append(desc);
         sb.append(", createtime=").append(createtime);
+        sb.append(", path=").append(path);
         sb.append("]");
         return sb.toString();
     }

@@ -3,6 +3,7 @@ package rainclassv3.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
+import rainclassv3.pojo.Teacher;
 import rainclassv3.req.TeacherChangeScoreReq;
 import rainclassv3.req.TeacherMyClassQueryReq;
 import rainclassv3.req.TeacherMyStudentReq;
@@ -72,6 +73,19 @@ public class TeacherController {
         LOG.info("传入的成绩信息为:{}",req);
         teacherService.changeScore(req);
         CommonResp commonResp = new CommonResp();
+        return commonResp;
+    }
+
+
+    /**
+     * 获取全部教师信息
+     * @return
+     */
+    @GetMapping("/getAll")
+    public CommonResp getAll() {
+        List<Teacher> all = teacherService.getAll();
+        CommonResp commonResp = new CommonResp();
+        commonResp.setContent(all);
         return commonResp;
     }
 

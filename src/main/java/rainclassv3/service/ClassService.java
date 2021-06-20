@@ -1,11 +1,13 @@
 package rainclassv3.service;
 
 import com.github.pagehelper.PageInfo;
+import org.springframework.web.multipart.MultipartFile;
 import rainclassv3.pojo.Class;
 import rainclassv3.req.ClassQueryReq;
 import rainclassv3.req.ClassSaveReq;
 import rainclassv3.resp.ClassQueryResp;
 import rainclassv3.resp.PageResp;
+import rainclassv3.resp.PicUploadResp;
 
 import java.util.List;
 
@@ -45,4 +47,11 @@ public interface ClassService {
      * @return
      */
     ClassQueryResp selectById(Long id);
+
+    /**
+     * 课程图片上传
+     * @param file
+     * @return
+     */
+    PicUploadResp upload(MultipartFile file);
 }

@@ -40,12 +40,12 @@
                              targetPackage="rainclassv3.mapper"
                              type="XMLMAPPER"/>
 
-        <table tableName="admin"/>
+        <!--<table tableName="admin"/>-->
         <table tableName="class"/>
-        <table tableName="comments"/>
-        <table tableName="download"/>
-        <table tableName="score"/>
-        <table tableName="student"/>
-        <table tableName="teacher"/>
+        <!--<table tableName="comments"/>-->
+        <!--<table tableName="download"/>-->
+        <!--<table tableName="score"/>-->
+        <!--<table tableName="student"/>-->
+        <!--<table tableName="teacher"/>-->
     </context>
 </generatorConfiguration>

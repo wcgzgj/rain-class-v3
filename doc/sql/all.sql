@@ -74,6 +74,7 @@ create table `class` (
                            `credit` int comment '学分',
                            `desc` varchar(255) comment '课程介绍',
                            `createtime` datetime comment '创建时间',
+                           `path` varchar(255) comment '封面图片名称',
                            primary key (`id`)
 ) engine=innodb default charset=utf8mb4 comment='权限表';
 

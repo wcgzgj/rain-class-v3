@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import rainclassv3.pojo.Teacher;
 
-import java.util.Date;
-
 /**
  * @ClassName ClassQueryResp
  * @Description TODO
@@ -38,6 +36,10 @@ public class ClassQueryResp {
 
     private String desc;
 
+    /**
+     * 课程封面名称
+     */
+    private String path;
 
     /**
      * 教授课程的教师信息

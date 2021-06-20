@@ -14,7 +14,7 @@
               @search="onSearch"
       />
 
-      <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData" :loading="spinning">
+      <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData" :loading="loading">
           <template #footer>
             <div>
               <p style="text-align: center">课程列表</p>
@@ -26,7 +26,7 @@
                 <img
                         width="200"
                         alt="logo"
-                        src="../assets/ds.jpg"
+                        :src="basePicPath+item.path"
                 />
               </template>
               <a-list-item-meta :description="'课程介绍'">
@@ -61,14 +61,14 @@ import {onMounted} from "@vue/runtime-core";
 export default defineComponent({
   name: 'Home',
   setup() {
-    const spinning = ref(true);
+    const loading = ref(true);
 
     /**
      * 分页
      */
     const pagination = {
       onChange: page => {
-        spinning.value=true;
+        loading.value=true;
         searchForm.value.pageNum=page;
         onSearch(page);
       },
@@ -92,7 +92,7 @@ export default defineComponent({
     const onSearch = (pageNum) => {
       console.log(pageNum);
       console.log(searchForm.value.pageSize);
-      spinning.value=false;
+      loading.value=false;
 
       axios.get("/class/list",{
         params:{
@@ -118,6 +118,9 @@ export default defineComponent({
       })
     }
 
+    const basePicPath=ref("");
+    basePicPath.value+=process.env.VUE_APP_SERVER+"/disPic/";
+
     onMounted(()=>{
       onSearch(1);
     });
@@ -128,7 +131,8 @@ export default defineComponent({
       pagination,
       onSearch,
       searchForm,
-      spinning
+      loading,
+      basePicPath
     };
   }
 

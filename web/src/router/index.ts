@@ -13,6 +13,7 @@ import TeacherClassList from '../views/teacher/TeacherClassList.vue'
 import TeacherComment from '../views/teacher/TeacherComment.vue'
 import AdminClassList from '../views/admin/AdminClassList.vue'
 import AdminClassInfo from '../views/admin/AdminClassInfo.vue'
+import AdminComment from '../views/admin/AdminComment.vue'
 import ResetPassword from '../views/user/ResetPassword.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -90,6 +91,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/adminClassInfo',
     name: 'AdminClassInfo',
     component: AdminClassInfo
+  },
+  {
+    path: '/adminComment',
+    name: 'AdminComment',
+    component: AdminComment
   },
 ]
 

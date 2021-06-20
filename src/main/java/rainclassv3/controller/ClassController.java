@@ -1,11 +1,14 @@
 package rainclassv3.controller;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import rainclassv3.pojo.Class;
 import rainclassv3.req.ClassQueryReq;
+import rainclassv3.req.ClassSaveReq;
 import rainclassv3.resp.ClassQueryResp;
 import rainclassv3.resp.CommonResp;
 import rainclassv3.resp.PageResp;
+import rainclassv3.resp.PicUploadResp;
 import rainclassv3.service.ClassService;
 
 import javax.annotation.Resource;
@@ -64,10 +67,32 @@ public class ClassController {
         }
         ClassQueryResp classQueryResp = classService.selectById(classId);
 
-
         CommonResp commonResp = new CommonResp();
         commonResp.setContent(classQueryResp);
         return commonResp;
     }
 
+
+    /**
+     * 课程图片上传接口
+     * @param file
+     * @return
+     */
+    @RequestMapping("/uploadPic")
+    public CommonResp uploadPic(@RequestParam MultipartFile file) {
+        PicUploadResp upload = classService.upload(file);
+        CommonResp commonResp = new CommonResp();
+        commonResp.setContent(upload);
+        return commonResp;
+    }
+
+
+    /**
+     * 课程保存/更新接口
+     */
+    @PostMapping("/save")
+    public CommonResp save(@RequestBody ClassSaveReq req) {
+        classService.save(req);
+        return new CommonResp();
+    }
 }

@@ -7,15 +7,29 @@
 
             <p style="font-size: 30px">所有课程</p>
 
-            <a-input-search
-                    v-model:value="searchForm.classname"
-                    placeholder="请输入课程名称"
-                    enter-button="搜索"
-                    size="large"
-                    @search="onSearch"
-            />
+            <a-row>
+                <a-col :span="18">
+                    <a-input-search
+                            v-model:value="searchForm.classname"
+                            placeholder="请输入课程名称"
+                            enter-button="搜索"
+                            size="large"
+                            @search="onSearch"
+                    />
+                </a-col>
+                <a-col :span="1">
 
-            <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData" :loading="spinning">
+                </a-col>
+                <a-col :span="5">
+                    <a-button type="primary" size="large">新增课程</a-button>
+                </a-col>
+            </a-row>
+
+
+
+
+
+            <a-list item-layout="vertical" size="large" :pagination="pagination"  :data-source="listData" :loading="loading">
                 <template #footer>
                     <div>
                         <p style="text-align: center">课程列表</p>
@@ -27,12 +41,12 @@
                             <img
                                     width="200"
                                     alt="logo"
-                                    src="../assets/ds.jpg"
+                                    src="../../assets/ds.jpg"
                             />
                         </template>
                         <a-list-item-meta :description="'课程介绍'">
                             <template #title>
-                                <router-link :to="'/classinfo?id='+item.id">
+                                <router-link :to="'/adminClassInfo?id='+item.id">
                                     {{ item.classname }}
                                 </router-link>
                             </template>
@@ -59,14 +73,15 @@
     export default {
         name: "AdminClass",
         setup() {
-            const spinning = ref(true);
+
+            const loading = ref(true);
+
 
             /**
              * 分页
              */
             const pagination = {
                 onChange: page => {
-                    spinning.value=true;
                     searchForm.value.pageNum=page;
                     onSearch(page);
                 },
@@ -90,7 +105,7 @@
             const onSearch = (pageNum) => {
                 console.log(pageNum);
                 console.log(searchForm.value.pageSize);
-                spinning.value=false;
+
 
                 axios.get("/class/list",{
                     params:{
@@ -99,6 +114,7 @@
                         classname:searchForm.value.classname
                     }
                 }).then(resp => {
+                    loading.value=false;
                     const data = resp.data;
                     if (data.success) {
                         const pageInfo = data.content;
@@ -126,7 +142,8 @@
                 pagination,
                 onSearch,
                 searchForm,
-                spinning
+                loading,
+
             };
         }
     }
