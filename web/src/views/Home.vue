@@ -3,6 +3,8 @@
     <a-breadcrumb :style="{ margin: '16px 0' }"><!--面包屑导航目前做不了，就把空间先留下了--></a-breadcrumb>
     <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
+      <p style="font-size: 30px">课程列表</p>
+
       <a-input-search
               v-model:value="searchForm.classname"
               placeholder="请输入课程名称"

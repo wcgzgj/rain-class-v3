@@ -174,6 +174,7 @@
     import {computed} from "@vue/reactivity";
     import axios from 'axios';
     import store from "@/store";
+    import router from '../router';
 
     export default {
         name: "Header",
@@ -248,6 +249,7 @@
                     if(data.success) {
                         store.commit("setUser",{});
                         message.success("退出成功！");
+                        router.push("/");
                     } else {
                         message.error(data.message);
                     }

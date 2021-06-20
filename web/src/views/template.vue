@@ -17,6 +17,7 @@
     import store from "@/store";
     import axios from 'axios';
     import {useRoute} from "vue-router";
+    import router from '../router';
 
     export default defineComponent({
         name: 'template',

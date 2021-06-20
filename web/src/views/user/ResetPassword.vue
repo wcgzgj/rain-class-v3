@@ -6,7 +6,7 @@
 
             <a-form :model="passwordForm" :label-col="labelCol" :wrapper-col="wrapperCol">
                 <a-form-item label="原密码">
-                    <a-input v-model:value="passwordForm.origin" />
+                    <a-input v-model:value="passwordForm.origin" :onblur="originBlur" />
                 </a-form-item>
                 <a-form-item label="新密码">
                     <a-input v-model:value="passwordForm.newPassword" />
@@ -30,6 +30,7 @@
     import { message } from 'ant-design-vue';
     import {computed} from "@vue/reactivity";
     import store from "@/store";
+    import axios from 'axios';
 
     export default {
         name: "ResetPassword",
@@ -46,7 +47,10 @@
             const passwordForm = ref({
                 origin:"",
                 newPassword:"",
-                checkPassword:""
+                checkPassword:"",
+                role:user.value.role,
+                id:user.value.id,
+                token:user.value.token
             });
 
             /**
@@ -55,7 +59,10 @@
             const clearInput = () => {
                 passwordForm.value.origin="";
                 passwordForm.value.newPassword="";
-                passwordForm.value.checkPassword=""
+                passwordForm.value.checkPassword="";
+                passwordForm.value.role="";
+                passwordForm.value.id="";
+                passwordForm.value.token="";
             }
 
             /**
@@ -74,6 +81,10 @@
                     message.error("错误，请输入完整信息！");
                     return false;
                 }
+                if (passwordForm.value.newPassword!=passwordForm.value.checkPassword) {
+                    message.error("两次密码输入不一致！");
+                    return false;
+                }
 
                 axios.post("/user/changePassword",passwordForm.value).then(resp=>{
                     const data = resp.data;
@@ -84,13 +95,35 @@
                         message.error(data.message);
                     }
                 })
+            }
 
+
+            /**
+             * 原密码输入框失去焦点
+             */
+            const originBlur = () => {
+                console.log("尝试与redis缓存中的原密码进行对比");
+                console.log("当前用户的token信息为:"+user.value.token);
+                axios.get("/user/checkPassword",{
+                    params: {
+                        origin:passwordForm.value.origin,
+                        token:user.value.token
+                    }
+                }).then(resp=> {
+                    const data = resp.data;
+                    if (data.success) {
+                        //原密码与现在的密码一致
+                    } else {
+                        message.error(data.message);
+                    }
+                })
             }
 
             return {
                 passwordForm,
                 onSubmit,
-                clearInput
+                clearInput,
+                originBlur,
             };
         },
     }
