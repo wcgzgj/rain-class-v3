@@ -5250,3 +5250,889 @@ java.lang.NumberFormatException: null
 2021-06-20 19:15:42.436 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61775984449425408 [0;39m 请求参数: [{"classname":"","pageNum":4,"pageSize":3}]
 2021-06-20 19:15:42.662 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61775984449425408 [0;39m 返回结果: {"content":{"list":[{"classname":"课程7","code":"123","credit":3,"desc":"这是操作系统的课程","id":10,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"自主发展课"},{"classname":"课程8","code":"123","credit":3,"desc":"这是操作系统的课程","id":11,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"}],"pageNum":4,"pageSize":3,"total":11},"success":true}
 2021-06-20 19:15:42.662 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61775984449425408 [0;39m ------------- 结束 耗时：227 ms -------------
+2021-06-20 19:49:56.740 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61784600824909824 [0;39m ------------- 开始 -------------
+2021-06-20 19:49:56.752 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61784600824909824 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myClass GET
+2021-06-20 19:49:56.753 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61784600824909824 [0;39m 类名方法: rainclassv3.controller.TeacherController.myClass
+2021-06-20 19:49:56.753 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61784600824909824 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:49:56.755 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61784600824909824 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3,"teacherid":"3"}]
+2021-06-20 19:49:56.778 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61784600824909824 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@33fc039e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-20 19:49:56.789 WARN  com.zaxxer.hikari.pool.PoolBase                   :184  [32m61784600824909824 [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@43253215 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-06-20 19:49:56.866 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61784600824909824 [0;39m 返回结果: {"content":{"list":[{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},{"classname":"课程1","code":"123","credit":3,"desc":"这是操作系统的课程","id":4,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"},{"classname":"课程4","code":"123","credit":3,"desc":"这是操作系统的课程","id":7,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"}],"pageNum":1,"pageSize":3,"total":7},"success":true}
+2021-06-20 19:49:56.867 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61784600824909824 [0;39m ------------- 结束 耗时：128 ms -------------
+2021-06-20 19:49:58.484 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61784608143970304 [0;39m ------------- 开始 -------------
+2021-06-20 19:49:58.485 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61784608148164608 [0;39m ------------- 开始 -------------
+2021-06-20 19:49:58.485 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61784608143970304 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 19:49:58.485 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61784608148164608 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 19:49:58.485 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61784608143970304 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 19:49:58.485 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61784608148164608 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 19:49:58.485 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61784608143970304 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:49:58.485 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61784608148164608 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:49:58.486 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61784608143970304 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 19:49:58.486 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61784608148164608 [0;39m 请求参数: ["3"]
+2021-06-20 19:49:58.486 INFO  rainclassv3.controller.TeacherController          :50   [32m61784608143970304 [0;39m 传入的课程id 为:3
+2021-06-20 19:49:58.588 INFO  rainclassv3.controller.TeacherController          :52   [32m61784608143970304 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=null)]
+2021-06-20 19:49:58.589 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61784608143970304 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1"}],"success":true}
+2021-06-20 19:49:58.590 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61784608143970304 [0;39m ------------- 结束 耗时：106 ms -------------
+2021-06-20 19:49:58.598 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61784608148164608 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 19:49:58.599 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61784608148164608 [0;39m ------------- 结束 耗时：114 ms -------------
+2021-06-20 19:50:57.308 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61784854861320192 [0;39m ------------- 开始 -------------
+2021-06-20 19:50:57.308 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61784854857125888 [0;39m ------------- 开始 -------------
+2021-06-20 19:50:57.335 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61784854861320192 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 19:50:57.335 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61784854857125888 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 19:50:57.336 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61784854861320192 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 19:50:57.336 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61784854857125888 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 19:50:57.336 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61784854861320192 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:50:57.337 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61784854857125888 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:50:57.337 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61784854857125888 [0;39m 请求参数: ["3"]
+2021-06-20 19:50:57.337 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61784854861320192 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 19:50:57.338 INFO  rainclassv3.controller.TeacherController          :50   [32m61784854861320192 [0;39m 传入的课程id 为:3
+2021-06-20 19:50:57.446 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61784854857125888 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 19:50:57.447 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61784854857125888 [0;39m ------------- 结束 耗时：142 ms -------------
+2021-06-20 19:50:57.462 INFO  rainclassv3.controller.TeacherController          :52   [32m61784854861320192 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=null)]
+2021-06-20 19:50:57.462 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61784854861320192 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1"}],"success":true}
+2021-06-20 19:50:57.462 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61784854861320192 [0;39m ------------- 结束 耗时：156 ms -------------
+2021-06-20 19:51:26.653 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61784977951559680 [0;39m ------------- 开始 -------------
+2021-06-20 19:51:26.654 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61784977951559680 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myClass GET
+2021-06-20 19:51:26.655 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61784977951559680 [0;39m 类名方法: rainclassv3.controller.TeacherController.myClass
+2021-06-20 19:51:26.655 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61784977951559680 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:51:26.655 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61784977951559680 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3,"teacherid":"3"}]
+2021-06-20 19:51:26.731 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61784977951559680 [0;39m 返回结果: {"content":{"list":[{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},{"classname":"课程1","code":"123","credit":3,"desc":"这是操作系统的课程","id":4,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"},{"classname":"课程4","code":"123","credit":3,"desc":"这是操作系统的课程","id":7,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"}],"pageNum":1,"pageSize":3,"total":7},"success":true}
+2021-06-20 19:51:26.731 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61784977951559680 [0;39m ------------- 结束 耗时：78 ms -------------
+2021-06-20 19:51:27.821 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61784982850506752 [0;39m ------------- 开始 -------------
+2021-06-20 19:51:27.822 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61784982850506752 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 19:51:27.822 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61784982850506752 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 19:51:27.822 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61784982854701056 [0;39m ------------- 开始 -------------
+2021-06-20 19:51:27.823 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61784982850506752 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:51:27.823 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61784982854701056 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 19:51:27.823 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61784982850506752 [0;39m 请求参数: ["3"]
+2021-06-20 19:51:27.823 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61784982854701056 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 19:51:27.823 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61784982854701056 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:51:27.824 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61784982854701056 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 19:51:27.824 INFO  rainclassv3.controller.TeacherController          :50   [32m61784982854701056 [0;39m 传入的课程id 为:3
+2021-06-20 19:51:27.910 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61784982850506752 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 19:51:27.911 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61784982850506752 [0;39m ------------- 结束 耗时：90 ms -------------
+2021-06-20 19:51:27.923 INFO  rainclassv3.controller.TeacherController          :52   [32m61784982854701056 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=null)]
+2021-06-20 19:51:27.927 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61784982854701056 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1"}],"success":true}
+2021-06-20 19:51:27.928 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61784982854701056 [0;39m ------------- 结束 耗时：106 ms -------------
+2021-06-20 19:51:37.011 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61785021387771904 [0;39m ------------- 开始 -------------
+2021-06-20 19:51:37.012 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61785021400354816 [0;39m ------------- 开始 -------------
+2021-06-20 19:51:37.023 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61785021400354816 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 19:51:37.023 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61785021387771904 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 19:51:37.023 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61785021387771904 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 19:51:37.023 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61785021400354816 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 19:51:37.024 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61785021387771904 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:51:37.024 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61785021400354816 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:51:37.025 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61785021400354816 [0;39m 请求参数: ["3"]
+2021-06-20 19:51:37.025 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61785021387771904 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 19:51:37.025 INFO  rainclassv3.controller.TeacherController          :50   [32m61785021387771904 [0;39m 传入的课程id 为:3
+2021-06-20 19:51:37.122 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61785021400354816 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 19:51:37.122 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61785021400354816 [0;39m ------------- 结束 耗时：110 ms -------------
+2021-06-20 19:51:37.128 INFO  rainclassv3.controller.TeacherController          :52   [32m61785021387771904 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=null)]
+2021-06-20 19:51:37.128 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61785021387771904 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1"}],"success":true}
+2021-06-20 19:51:37.128 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61785021387771904 [0;39m ------------- 结束 耗时：119 ms -------------
+2021-06-20 19:52:04.712 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61785137578381312 [0;39m ------------- 开始 -------------
+2021-06-20 19:52:04.715 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61785137578381312 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 19:52:04.715 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61785137578381312 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 19:52:04.715 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61785137578381312 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:52:04.715 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61785137595158528 [0;39m ------------- 开始 -------------
+2021-06-20 19:52:04.716 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61785137578381312 [0;39m 请求参数: ["3"]
+2021-06-20 19:52:04.716 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61785137595158528 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 19:52:04.717 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61785137595158528 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 19:52:04.718 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61785137595158528 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:52:04.718 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61785137595158528 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 19:52:04.719 INFO  rainclassv3.controller.TeacherController          :50   [32m61785137595158528 [0;39m 传入的课程id 为:3
+2021-06-20 19:52:04.828 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61785137578381312 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 19:52:04.829 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61785137578381312 [0;39m ------------- 结束 耗时：118 ms -------------
+2021-06-20 19:52:04.829 INFO  rainclassv3.controller.TeacherController          :52   [32m61785137595158528 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=32.0)]
+2021-06-20 19:52:04.869 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61785137595158528 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":32.0}],"success":true}
+2021-06-20 19:52:04.869 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61785137595158528 [0;39m ------------- 结束 耗时：154 ms -------------
+2021-06-20 19:52:32.712 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61785255023087616 [0;39m ------------- 开始 -------------
+2021-06-20 19:52:32.713 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61785255027281920 [0;39m ------------- 开始 -------------
+2021-06-20 19:52:32.726 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61785255023087616 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 19:52:32.726 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61785255023087616 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 19:52:32.726 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61785255023087616 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:52:32.727 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61785255023087616 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 19:52:32.727 INFO  rainclassv3.controller.TeacherController          :50   [32m61785255023087616 [0;39m 传入的课程id 为:3
+2021-06-20 19:52:32.729 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61785255027281920 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 19:52:32.730 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61785255027281920 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 19:52:32.730 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61785255027281920 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:52:32.731 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61785255027281920 [0;39m 请求参数: ["3"]
+2021-06-20 19:52:32.866 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61785255027281920 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 19:52:32.870 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61785255027281920 [0;39m ------------- 结束 耗时：157 ms -------------
+2021-06-20 19:52:32.873 INFO  rainclassv3.controller.TeacherController          :52   [32m61785255023087616 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=32.0)]
+2021-06-20 19:52:32.873 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61785255023087616 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":32.0}],"success":true}
+2021-06-20 19:52:32.874 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61785255023087616 [0;39m ------------- 结束 耗时：162 ms -------------
+2021-06-20 19:52:59.542 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61785367556263936 [0;39m ------------- 开始 -------------
+2021-06-20 19:52:59.544 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61785367556263936 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 19:52:59.544 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61785367556263936 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 19:52:59.544 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61785367556263936 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:52:59.545 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61785367556263936 [0;39m 请求参数: ["3"]
+2021-06-20 19:52:59.554 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61785367606595584 [0;39m ------------- 开始 -------------
+2021-06-20 19:52:59.555 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61785367606595584 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 19:52:59.556 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61785367606595584 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 19:52:59.556 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61785367606595584 [0;39m 远程地址: 127.0.0.1
+2021-06-20 19:52:59.556 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61785367606595584 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 19:52:59.557 INFO  rainclassv3.controller.TeacherController          :50   [32m61785367606595584 [0;39m 传入的课程id 为:3
+2021-06-20 19:52:59.625 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61785367556263936 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 19:52:59.626 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61785367556263936 [0;39m ------------- 结束 耗时：84 ms -------------
+2021-06-20 19:52:59.645 INFO  rainclassv3.controller.TeacherController          :52   [32m61785367606595584 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=77.0)]
+2021-06-20 19:52:59.647 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61785367606595584 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":77.0}],"success":true}
+2021-06-20 19:52:59.647 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61785367606595584 [0;39m ------------- 结束 耗时：93 ms -------------
+2021-06-20 20:06:14.637 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-20 20:06:14.648 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-20 20:06:20.566 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-20 20:06:20.568 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 13777 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-20 20:06:20.571 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-20 20:06:20.635 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-20 20:06:20.636 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-20 20:06:21.345 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-20 20:06:21.346 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-20 20:06:21.355 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2021-06-20 20:06:21.371 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-20 20:06:21.372 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-20 20:06:21.384 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2021-06-20 20:06:22.255 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-20 20:06:22.267 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-20 20:06:22.268 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-20 20:06:22.268 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-20 20:06:22.334 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-20 20:06:22.335 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1699 ms
+2021-06-20 20:06:23.499 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-20 20:06:23.598 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-20 20:06:23.982 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-20 20:06:24.363 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-20 20:06:24.385 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-20 20:06:24.413 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-20 20:06:24.423 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 4.325 seconds (JVM running for 4.913)
+2021-06-20 20:06:30.684 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-20 20:06:30.685 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-20 20:06:30.687 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2021-06-20 20:06:30.755 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61788770021806080 [0;39m ------------- 开始 -------------
+2021-06-20 20:06:30.755 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61788770021806081 [0;39m ------------- 开始 -------------
+2021-06-20 20:06:30.757 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61788770021806080 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:06:30.757 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61788770021806080 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:06:30.758 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61788770021806080 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:06:30.759 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61788770021806081 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:06:30.760 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61788770021806081 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:06:30.760 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61788770021806081 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:06:30.856 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61788770021806080 [0;39m 请求参数: ["3"]
+2021-06-20 20:06:30.878 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61788770021806081 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:06:30.883 INFO  rainclassv3.controller.TeacherController          :57   [32m61788770021806081 [0;39m 传入的课程id 为:3
+2021-06-20 20:06:31.238 INFO  rainclassv3.controller.TeacherController          :59   [32m61788770021806081 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=77.0)]
+2021-06-20 20:06:31.288 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61788770021806081 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":77.0}],"success":true}
+2021-06-20 20:06:31.288 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61788770021806081 [0;39m ------------- 结束 耗时：535 ms -------------
+2021-06-20 20:06:31.296 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61788770021806080 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:06:31.297 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61788770021806080 [0;39m ------------- 结束 耗时：544 ms -------------
+2021-06-20 20:07:21.801 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61788984132636672 [0;39m ------------- 开始 -------------
+2021-06-20 20:07:21.801 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61788984132636673 [0;39m ------------- 开始 -------------
+2021-06-20 20:07:21.807 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61788984132636673 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:07:21.807 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61788984132636672 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:07:21.807 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61788984132636672 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:07:21.807 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61788984132636673 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:07:21.808 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61788984132636672 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:07:21.808 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61788984132636673 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:07:21.809 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61788984132636672 [0;39m 请求参数: ["3"]
+2021-06-20 20:07:21.809 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61788984132636673 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:07:21.809 INFO  rainclassv3.controller.TeacherController          :57   [32m61788984132636673 [0;39m 传入的课程id 为:3
+2021-06-20 20:07:21.918 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61788984132636672 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:07:21.918 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61788984132636672 [0;39m ------------- 结束 耗时：117 ms -------------
+2021-06-20 20:07:21.934 INFO  rainclassv3.controller.TeacherController          :59   [32m61788984132636673 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=77.0)]
+2021-06-20 20:07:21.935 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61788984132636673 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":77.0}],"success":true}
+2021-06-20 20:07:21.936 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61788984132636673 [0;39m ------------- 结束 耗时：135 ms -------------
+2021-06-20 20:07:31.513 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789024867717120 [0;39m ------------- 开始 -------------
+2021-06-20 20:07:31.520 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789024867717120 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:07:31.521 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789024867717120 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:07:31.521 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789024867717120 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:07:31.537 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789024867717120 [0;39m 请求参数: [{}]
+2021-06-20 20:07:31.624 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61789024867717120 [0;39m 系统异常：
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.parseLong(Long.java:631)
+	at rainclassv3.service.impl.TeacherServiceImpl.changeScore(TeacherServiceImpl.java:129)
+	at rainclassv3.service.impl.TeacherServiceImpl$$FastClassBySpringCGLIB$$c19fc59b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.service.impl.TeacherServiceImpl$$EnhancerBySpringCGLIB$$bf27bcff.changeScore(<generated>)
+	at rainclassv3.controller.TeacherController.changeScore(TeacherController.java:75)
+	at rainclassv3.controller.TeacherController$$FastClassBySpringCGLIB$$dac2f619.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.TeacherController$$EnhancerBySpringCGLIB$$46bea489.changeScore(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-20 20:07:31.630 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61789024867717120 [0;39m Resolved [java.lang.NumberFormatException: null]
+2021-06-20 20:08:20.008 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-20 20:08:20.026 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-20 20:08:23.984 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-20 20:08:23.987 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 13799 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-20 20:08:23.988 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-20 20:08:24.026 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-20 20:08:24.026 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-20 20:08:24.728 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-20 20:08:24.729 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-20 20:08:24.737 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-20 20:08:24.756 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-20 20:08:24.758 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-20 20:08:24.766 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2021-06-20 20:08:25.365 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-20 20:08:25.372 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-20 20:08:25.373 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-20 20:08:25.373 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-20 20:08:25.425 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-20 20:08:25.425 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1399 ms
+2021-06-20 20:08:26.335 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-20 20:08:26.419 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-20 20:08:26.696 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-20 20:08:26.962 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-20 20:08:26.982 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-20 20:08:27.008 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-20 20:08:27.017 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 3.388 seconds (JVM running for 3.908)
+2021-06-20 20:08:32.656 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-20 20:08:32.657 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-20 20:08:32.659 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-06-20 20:08:32.705 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789281521373184 [0;39m ------------- 开始 -------------
+2021-06-20 20:08:32.706 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789281521373184 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:08:32.706 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789281521373184 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:08:32.706 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789281521373184 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:08:32.763 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789281521373184 [0;39m 请求参数: [{}]
+2021-06-20 20:08:32.768 INFO  rainclassv3.controller.TeacherController          :75   [32m61789281521373184 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=null, realname=null, score=null, classid=null)
+2021-06-20 20:08:32.860 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61789281521373184 [0;39m 系统异常：
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.parseLong(Long.java:631)
+	at rainclassv3.service.impl.TeacherServiceImpl.changeScore(TeacherServiceImpl.java:129)
+	at rainclassv3.service.impl.TeacherServiceImpl$$FastClassBySpringCGLIB$$c19fc59b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.service.impl.TeacherServiceImpl$$EnhancerBySpringCGLIB$$603228bb.changeScore(<generated>)
+	at rainclassv3.controller.TeacherController.changeScore(TeacherController.java:76)
+	at rainclassv3.controller.TeacherController$$FastClassBySpringCGLIB$$dac2f619.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.TeacherController$$EnhancerBySpringCGLIB$$e13f89bd.changeScore(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-20 20:08:32.948 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61789281521373184 [0;39m Resolved [java.lang.NumberFormatException: null]
+2021-06-20 20:09:03.958 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-06-20 20:09:03.983 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-06-20 20:09:07.873 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2021-06-20 20:09:07.883 INFO  rainclassv3.config.RainClassV3Application         :55   [32m                  [0;39m Starting RainClassV3Application using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 13807 (/Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3/target/classes started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v3)
+2021-06-20 20:09:07.883 INFO  rainclassv3.config.RainClassV3Application         :659  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-06-20 20:09:07.926 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-20 20:09:07.926 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-20 20:09:08.539 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-20 20:09:08.540 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-20 20:09:08.547 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2021-06-20 20:09:08.557 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :262  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-20 20:09:08.558 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :132  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-20 20:09:08.566 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :201  [32m                  [0;39m Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2021-06-20 20:09:09.211 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 9000 (http)
+2021-06-20 20:09:09.218 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-9000"]
+2021-06-20 20:09:09.219 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-06-20 20:09:09.219 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-20 20:09:09.269 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-20 20:09:09.270 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1344 ms
+2021-06-20 20:09:10.173 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:105  [32m                  [0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-20 20:09:10.257 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-06-20 20:09:10.520 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-06-20 20:09:10.805 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-06-20 20:09:10.825 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-9000"]
+2021-06-20 20:09:10.851 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 9000 (http) with context path ''
+2021-06-20 20:09:10.861 INFO  rainclassv3.config.RainClassV3Application         :61   [32m                  [0;39m Started RainClassV3Application in 3.353 seconds (JVM running for 3.882)
+2021-06-20 20:09:18.195 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-20 20:09:18.196 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-20 20:09:18.198 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2021-06-20 20:09:18.313 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789472806801408 [0;39m ------------- 开始 -------------
+2021-06-20 20:09:18.314 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789472806801408 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:09:18.314 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789472806801408 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:09:18.315 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789472806801408 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:09:18.374 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789472806801408 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"99","studentid":"1"}]
+2021-06-20 20:09:18.379 INFO  rainclassv3.controller.TeacherController          :72   [32m61789472806801408 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=99, classid=3)
+2021-06-20 20:09:18.622 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789472806801408 [0;39m 返回结果: {"success":true}
+2021-06-20 20:09:18.623 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789472806801408 [0;39m ------------- 结束 耗时：313 ms -------------
+2021-06-20 20:09:27.513 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789511406981120 [0;39m ------------- 开始 -------------
+2021-06-20 20:09:27.514 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789511406981120 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:09:27.515 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789511406981120 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:09:27.515 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789511406981120 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:09:27.516 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789511406981120 [0;39m 请求参数: ["3"]
+2021-06-20 20:09:27.516 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789511419564032 [0;39m ------------- 开始 -------------
+2021-06-20 20:09:27.517 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789511419564032 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:09:27.517 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789511419564032 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:09:27.518 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789511419564032 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:09:27.521 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789511419564032 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:09:27.522 INFO  rainclassv3.controller.TeacherController          :54   [32m61789511419564032 [0;39m 传入的课程id 为:3
+2021-06-20 20:09:27.627 INFO  rainclassv3.controller.TeacherController          :56   [32m61789511419564032 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=99.0)]
+2021-06-20 20:09:27.631 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789511419564032 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":99.0}],"success":true}
+2021-06-20 20:09:27.631 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789511419564032 [0;39m ------------- 结束 耗时：115 ms -------------
+2021-06-20 20:09:27.641 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789511406981120 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:09:27.641 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789511406981120 [0;39m ------------- 结束 耗时：128 ms -------------
+2021-06-20 20:10:22.672 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789742760595457 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:22.672 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789742760595456 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:22.678 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789742760595457 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:10:22.678 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789742760595456 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:10:22.679 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789742760595457 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:10:22.679 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789742760595456 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:10:22.679 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789742760595457 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:22.679 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789742760595456 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:22.680 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789742760595457 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:10:22.680 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789742760595456 [0;39m 请求参数: ["3"]
+2021-06-20 20:10:22.680 INFO  rainclassv3.controller.TeacherController          :54   [32m61789742760595457 [0;39m 传入的课程id 为:3
+2021-06-20 20:10:22.779 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789742760595456 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:10:22.779 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789742760595456 [0;39m ------------- 结束 耗时：107 ms -------------
+2021-06-20 20:10:22.786 INFO  rainclassv3.controller.TeacherController          :56   [32m61789742760595457 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=99.0)]
+2021-06-20 20:10:22.787 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789742760595457 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":99.0}],"success":true}
+2021-06-20 20:10:22.788 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789742760595457 [0;39m ------------- 结束 耗时：116 ms -------------
+2021-06-20 20:10:27.420 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789762675150848 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:27.421 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789762675150848 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:10:27.421 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789762675150848 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:10:27.421 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789762675150848 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:27.422 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789762675150848 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"23","studentid":"1"}]
+2021-06-20 20:10:27.422 INFO  rainclassv3.controller.TeacherController          :72   [32m61789762675150848 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=23, classid=3)
+2021-06-20 20:10:27.533 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789762675150848 [0;39m 返回结果: {"success":true}
+2021-06-20 20:10:27.534 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789762675150848 [0;39m ------------- 结束 耗时：114 ms -------------
+2021-06-20 20:10:27.571 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789763304296448 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:27.571 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789763308490752 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:27.571 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789763304296448 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:10:27.571 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789763308490752 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:10:27.571 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789763304296448 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:10:27.572 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789763308490752 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:10:27.572 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789763304296448 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:27.572 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789763304296448 [0;39m 请求参数: ["3"]
+2021-06-20 20:10:27.572 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789763308490752 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:27.573 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789763308490752 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:10:27.573 INFO  rainclassv3.controller.TeacherController          :54   [32m61789763308490752 [0;39m 传入的课程id 为:3
+2021-06-20 20:10:27.658 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789763304296448 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:10:27.659 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789763304296448 [0;39m ------------- 结束 耗时：89 ms -------------
+2021-06-20 20:10:27.678 INFO  rainclassv3.controller.TeacherController          :56   [32m61789763308490752 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=23.0)]
+2021-06-20 20:10:27.679 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789763308490752 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":23.0}],"success":true}
+2021-06-20 20:10:27.679 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789763308490752 [0;39m ------------- 结束 耗时：108 ms -------------
+2021-06-20 20:10:32.280 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789783059468288 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:32.280 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789783059468288 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:10:32.281 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789783059468288 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:10:32.281 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789783059468288 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:32.281 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789783059468288 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"10","studentid":"1"}]
+2021-06-20 20:10:32.282 INFO  rainclassv3.controller.TeacherController          :72   [32m61789783059468288 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=10, classid=3)
+2021-06-20 20:10:32.434 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789783059468288 [0;39m 返回结果: {"success":true}
+2021-06-20 20:10:32.435 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789783059468288 [0;39m ------------- 结束 耗时：155 ms -------------
+2021-06-20 20:10:32.525 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789784087072768 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:32.526 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789784091267072 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:32.526 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789784087072768 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:10:32.526 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789784091267072 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:10:32.526 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789784087072768 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:10:32.526 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789784091267072 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:10:32.526 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789784087072768 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:32.526 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789784091267072 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:32.527 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789784091267072 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:10:32.527 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789784087072768 [0;39m 请求参数: ["3"]
+2021-06-20 20:10:32.527 INFO  rainclassv3.controller.TeacherController          :54   [32m61789784091267072 [0;39m 传入的课程id 为:3
+2021-06-20 20:10:32.644 INFO  rainclassv3.controller.TeacherController          :56   [32m61789784091267072 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=10.0)]
+2021-06-20 20:10:32.644 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789784087072768 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:10:32.645 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789784091267072 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":10.0}],"success":true}
+2021-06-20 20:10:32.645 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789784087072768 [0;39m ------------- 结束 耗时：120 ms -------------
+2021-06-20 20:10:32.645 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789784091267072 [0;39m ------------- 结束 耗时：119 ms -------------
+2021-06-20 20:10:39.177 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789811987582976 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:39.178 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789811987582976 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:10:39.178 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789811987582976 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:10:39.178 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789811987582976 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:39.179 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789811987582976 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"88","studentid":"1"}]
+2021-06-20 20:10:39.179 INFO  rainclassv3.controller.TeacherController          :72   [32m61789811987582976 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=88, classid=3)
+2021-06-20 20:10:39.304 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789811987582976 [0;39m 返回结果: {"success":true}
+2021-06-20 20:10:39.304 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789811987582976 [0;39m ------------- 结束 耗时：127 ms -------------
+2021-06-20 20:10:39.341 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789812675448832 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:39.341 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789812675448833 [0;39m ------------- 开始 -------------
+2021-06-20 20:10:39.341 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789812675448832 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:10:39.342 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789812675448832 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:10:39.341 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789812675448833 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:10:39.342 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789812675448833 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:10:39.343 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789812675448833 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:39.344 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789812675448833 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:10:39.342 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789812675448832 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:10:39.345 INFO  rainclassv3.controller.TeacherController          :54   [32m61789812675448833 [0;39m 传入的课程id 为:3
+2021-06-20 20:10:39.346 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789812675448832 [0;39m 请求参数: ["3"]
+2021-06-20 20:10:39.439 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789812675448832 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:10:39.443 INFO  rainclassv3.controller.TeacherController          :56   [32m61789812675448833 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=88.0)]
+2021-06-20 20:10:39.459 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789812675448832 [0;39m ------------- 结束 耗时：118 ms -------------
+2021-06-20 20:10:39.460 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789812675448833 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":88.0}],"success":true}
+2021-06-20 20:10:39.460 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789812675448833 [0;39m ------------- 结束 耗时：119 ms -------------
+2021-06-20 20:11:10.620 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789943869083648 [0;39m ------------- 开始 -------------
+2021-06-20 20:11:10.622 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789943869083648 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:11:10.623 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789943869083648 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:11:10.623 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789943869083648 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:11:10.624 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789943869083648 [0;39m 请求参数: ["3"]
+2021-06-20 20:11:10.625 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789943890055168 [0;39m ------------- 开始 -------------
+2021-06-20 20:11:10.625 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789943890055168 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:11:10.626 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789943890055168 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:11:10.626 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789943890055168 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:11:10.626 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789943890055168 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:11:10.627 INFO  rainclassv3.controller.TeacherController          :54   [32m61789943890055168 [0;39m 传入的课程id 为:3
+2021-06-20 20:11:10.989 INFO  rainclassv3.controller.TeacherController          :56   [32m61789943890055168 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=88.0)]
+2021-06-20 20:11:10.989 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789943869083648 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:11:10.990 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789943869083648 [0;39m ------------- 结束 耗时：370 ms -------------
+2021-06-20 20:11:10.990 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789943890055168 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":88.0}],"success":true}
+2021-06-20 20:11:10.990 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789943890055168 [0;39m ------------- 结束 耗时：367 ms -------------
+2021-06-20 20:11:15.204 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789963091578880 [0;39m ------------- 开始 -------------
+2021-06-20 20:11:15.204 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789963091578880 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:11:15.205 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789963091578880 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:11:15.205 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789963091578880 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:11:15.206 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789963091578880 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"90","studentid":"1"}]
+2021-06-20 20:11:15.207 INFO  rainclassv3.controller.TeacherController          :72   [32m61789963091578880 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=90, classid=3)
+2021-06-20 20:11:15.320 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789963091578880 [0;39m 返回结果: {"success":true}
+2021-06-20 20:11:15.321 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789963091578880 [0;39m ------------- 结束 耗时：118 ms -------------
+2021-06-20 20:11:15.358 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789963741696001 [0;39m ------------- 开始 -------------
+2021-06-20 20:11:15.358 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789963741696000 [0;39m ------------- 开始 -------------
+2021-06-20 20:11:15.359 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789963741696000 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:11:15.359 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789963741696001 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:11:15.359 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789963741696000 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:11:15.359 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789963741696001 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:11:15.360 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789963741696001 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:11:15.360 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789963741696000 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:11:15.361 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789963741696000 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:11:15.361 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789963741696001 [0;39m 请求参数: ["3"]
+2021-06-20 20:11:15.361 INFO  rainclassv3.controller.TeacherController          :54   [32m61789963741696000 [0;39m 传入的课程id 为:3
+2021-06-20 20:11:15.451 INFO  rainclassv3.controller.TeacherController          :56   [32m61789963741696000 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=90.0)]
+2021-06-20 20:11:15.452 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789963741696000 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":90.0}],"success":true}
+2021-06-20 20:11:15.453 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789963741696000 [0;39m ------------- 结束 耗时：95 ms -------------
+2021-06-20 20:11:15.471 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789963741696001 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:11:15.472 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789963741696001 [0;39m ------------- 结束 耗时：114 ms -------------
+2021-06-20 20:11:20.997 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789987393376256 [0;39m ------------- 开始 -------------
+2021-06-20 20:11:20.998 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789987393376256 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:11:20.998 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789987393376256 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:11:20.998 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789987393376256 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:11:20.999 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789987393376256 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"81","studentid":"1"}]
+2021-06-20 20:11:20.999 INFO  rainclassv3.controller.TeacherController          :72   [32m61789987393376256 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=81, classid=3)
+2021-06-20 20:11:21.158 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789987393376256 [0;39m 返回结果: {"success":true}
+2021-06-20 20:11:21.159 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789987393376256 [0;39m ------------- 结束 耗时：162 ms -------------
+2021-06-20 20:11:21.237 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789988400009216 [0;39m ------------- 开始 -------------
+2021-06-20 20:11:21.237 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61789988400009217 [0;39m ------------- 开始 -------------
+2021-06-20 20:11:21.237 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789988400009216 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:11:21.237 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61789988400009217 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:11:21.238 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789988400009216 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:11:21.238 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61789988400009217 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:11:21.238 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789988400009216 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:11:21.238 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61789988400009217 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:11:21.239 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789988400009216 [0;39m 请求参数: ["3"]
+2021-06-20 20:11:21.239 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61789988400009217 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:11:21.240 INFO  rainclassv3.controller.TeacherController          :54   [32m61789988400009217 [0;39m 传入的课程id 为:3
+2021-06-20 20:11:21.330 INFO  rainclassv3.controller.TeacherController          :56   [32m61789988400009217 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=81.0)]
+2021-06-20 20:11:21.331 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789988400009217 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":81.0}],"success":true}
+2021-06-20 20:11:21.331 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789988400009217 [0;39m ------------- 结束 耗时：94 ms -------------
+2021-06-20 20:11:21.349 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61789988400009216 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:11:21.350 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61789988400009216 [0;39m ------------- 结束 耗时：113 ms -------------
+2021-06-20 20:13:07.246 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790433033981952 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:07.246 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790433029787648 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:07.254 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790433033981952 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:13:07.254 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790433029787648 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:13:07.255 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790433029787648 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:13:07.254 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790433033981952 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:13:07.255 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790433033981952 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:07.255 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790433029787648 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:07.257 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790433029787648 [0;39m 请求参数: ["3"]
+2021-06-20 20:13:07.257 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790433033981952 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:13:07.257 INFO  rainclassv3.controller.TeacherController          :54   [32m61790433033981952 [0;39m 传入的课程id 为:3
+2021-06-20 20:13:07.693 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790433029787648 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:13:07.692 INFO  rainclassv3.controller.TeacherController          :56   [32m61790433033981952 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=81.0)]
+2021-06-20 20:13:07.694 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790433029787648 [0;39m ------------- 结束 耗时：449 ms -------------
+2021-06-20 20:13:07.698 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790433033981952 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":81.0}],"success":true}
+2021-06-20 20:13:07.699 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790433033981952 [0;39m ------------- 结束 耗时：453 ms -------------
+2021-06-20 20:13:16.951 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790473739702272 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:16.952 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790473739702272 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:13:16.952 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790473739702272 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:13:16.952 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790473739702272 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:16.953 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790473739702272 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"eee","studentid":"1"}]
+2021-06-20 20:13:16.953 INFO  rainclassv3.controller.TeacherController          :72   [32m61790473739702272 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=eee, classid=3)
+2021-06-20 20:13:17.034 ERROR rainclassv3.controller.ControllerExceptionHandler :69   [32m61790473739702272 [0;39m 系统异常：
+java.lang.NumberFormatException: For input string: "eee"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.lang.Float.parseFloat(Float.java:451)
+	at rainclassv3.service.impl.TeacherServiceImpl.changeScore(TeacherServiceImpl.java:131)
+	at rainclassv3.service.impl.TeacherServiceImpl$$FastClassBySpringCGLIB$$c19fc59b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.service.impl.TeacherServiceImpl$$EnhancerBySpringCGLIB$$7d6d74ec.changeScore(<generated>)
+	at rainclassv3.controller.TeacherController.changeScore(TeacherController.java:73)
+	at rainclassv3.controller.TeacherController$$FastClassBySpringCGLIB$$dac2f619.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at rainclassv3.aspect.LogAspect.doAround(LogAspect.java:93)
+	at sun.reflect.GeneratedMethodAccessor73.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at rainclassv3.controller.TeacherController$$EnhancerBySpringCGLIB$$25d2a561.changeScore(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-20 20:13:17.042 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m61790473739702272 [0;39m Resolved [java.lang.NumberFormatException: For input string: "eee"]
+2021-06-20 20:13:21.973 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790494803496960 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:21.975 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790494803496960 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:13:21.975 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790494803496960 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:13:21.976 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790494803496960 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:21.976 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790494816079872 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:21.976 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790494803496960 [0;39m 请求参数: ["3"]
+2021-06-20 20:13:21.976 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790494816079872 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:13:21.976 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790494816079872 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:13:21.977 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790494816079872 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:21.978 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790494816079872 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:13:21.978 INFO  rainclassv3.controller.TeacherController          :54   [32m61790494816079872 [0;39m 传入的课程id 为:3
+2021-06-20 20:13:22.073 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790494803496960 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:13:22.073 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790494803496960 [0;39m ------------- 结束 耗时：100 ms -------------
+2021-06-20 20:13:22.134 INFO  rainclassv3.controller.TeacherController          :56   [32m61790494816079872 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=81.0)]
+2021-06-20 20:13:22.135 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790494816079872 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":81.0}],"success":true}
+2021-06-20 20:13:22.135 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790494816079872 [0;39m ------------- 结束 耗时：159 ms -------------
+2021-06-20 20:13:29.612 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790526843785216 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:29.614 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790526843785216 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:13:29.614 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790526843785216 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:13:29.614 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790526843785216 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:29.615 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790526843785216 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"91","studentid":"1"}]
+2021-06-20 20:13:29.615 INFO  rainclassv3.controller.TeacherController          :72   [32m61790526843785216 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=91, classid=3)
+2021-06-20 20:13:29.720 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790526843785216 [0;39m 返回结果: {"success":true}
+2021-06-20 20:13:29.721 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790526843785216 [0;39m ------------- 结束 耗时：109 ms -------------
+2021-06-20 20:13:29.756 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790527447764992 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:29.757 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790527447764992 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:13:29.757 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790527447764992 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:13:29.757 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790527451959296 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:29.758 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790527447764992 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:29.758 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790527451959296 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:13:29.759 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790527451959296 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:13:29.759 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790527447764992 [0;39m 请求参数: ["3"]
+2021-06-20 20:13:29.759 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790527451959296 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:29.760 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790527451959296 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:13:29.760 INFO  rainclassv3.controller.TeacherController          :54   [32m61790527451959296 [0;39m 传入的课程id 为:3
+2021-06-20 20:13:29.847 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790527447764992 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:13:29.848 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790527447764992 [0;39m ------------- 结束 耗时：92 ms -------------
+2021-06-20 20:13:29.865 INFO  rainclassv3.controller.TeacherController          :56   [32m61790527451959296 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=91.0)]
+2021-06-20 20:13:29.866 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790527451959296 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":91.0}],"success":true}
+2021-06-20 20:13:29.866 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790527451959296 [0;39m ------------- 结束 耗时：109 ms -------------
+2021-06-20 20:13:39.792 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790569541799936 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:39.793 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790569541799936 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:13:39.793 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790569541799936 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:13:39.793 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790569541799936 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:39.794 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790569541799936 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"89.2","studentid":"1"}]
+2021-06-20 20:13:39.794 INFO  rainclassv3.controller.TeacherController          :72   [32m61790569541799936 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=89.2, classid=3)
+2021-06-20 20:13:39.909 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790569541799936 [0;39m 返回结果: {"success":true}
+2021-06-20 20:13:39.910 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790569541799936 [0;39m ------------- 结束 耗时：118 ms -------------
+2021-06-20 20:13:39.945 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790570183528448 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:39.945 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790570183528448 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:13:39.945 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790570183528448 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:13:39.946 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790570183528448 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:39.946 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790570183528448 [0;39m 请求参数: ["3"]
+2021-06-20 20:13:39.950 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790570204499968 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:39.950 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790570204499968 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:13:39.951 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790570204499968 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:13:39.951 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790570204499968 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:39.951 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790570204499968 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:13:39.952 INFO  rainclassv3.controller.TeacherController          :54   [32m61790570204499968 [0;39m 传入的课程id 为:3
+2021-06-20 20:13:40.042 INFO  rainclassv3.controller.TeacherController          :56   [32m61790570204499968 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=89.2)]
+2021-06-20 20:13:40.043 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790570204499968 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":89.2}],"success":true}
+2021-06-20 20:13:40.043 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790570204499968 [0;39m ------------- 结束 耗时：93 ms -------------
+2021-06-20 20:13:40.054 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790570183528448 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:13:40.055 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790570183528448 [0;39m ------------- 结束 耗时：111 ms -------------
+2021-06-20 20:13:48.264 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790605075943424 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:48.265 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790605075943424 [0;39m 请求地址: http://127.0.0.1:9000/teacher/changeScore POST
+2021-06-20 20:13:48.265 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790605075943424 [0;39m 类名方法: rainclassv3.controller.TeacherController.changeScore
+2021-06-20 20:13:48.266 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790605075943424 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:48.266 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790605075943424 [0;39m 请求参数: [{"classid":"3","realname":"学生1","score":"78.5","studentid":"1"}]
+2021-06-20 20:13:48.267 INFO  rainclassv3.controller.TeacherController          :72   [32m61790605075943424 [0;39m 传入的成绩信息为:TeacherChangeScoreReq(studentid=1, realname=学生1, score=78.5, classid=3)
+2021-06-20 20:13:48.379 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790605075943424 [0;39m 返回结果: {"success":true}
+2021-06-20 20:13:48.380 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790605075943424 [0;39m ------------- 结束 耗时：116 ms -------------
+2021-06-20 20:13:48.410 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790605688311808 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:48.410 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790605688311809 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:48.411 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790605688311808 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/3 GET
+2021-06-20 20:13:48.411 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790605688311809 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myStudent GET
+2021-06-20 20:13:48.411 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790605688311809 [0;39m 类名方法: rainclassv3.controller.TeacherController.myStudent
+2021-06-20 20:13:48.411 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790605688311808 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:13:48.411 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790605688311809 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:48.412 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790605688311808 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:48.412 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790605688311809 [0;39m 请求参数: [{"classid":"3"}]
+2021-06-20 20:13:48.412 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790605688311808 [0;39m 请求参数: ["3"]
+2021-06-20 20:13:48.412 INFO  rainclassv3.controller.TeacherController          :54   [32m61790605688311809 [0;39m 传入的课程id 为:3
+2021-06-20 20:13:48.496 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790605688311808 [0;39m 返回结果: {"content":{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},"success":true}
+2021-06-20 20:13:48.497 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790605688311808 [0;39m ------------- 结束 耗时：87 ms -------------
+2021-06-20 20:13:48.518 INFO  rainclassv3.controller.TeacherController          :56   [32m61790605688311809 [0;39m 获取的学生数据为:[TeacherMyStudentResp(id=1, name=学生1, email=zhang@qq.com, score=78.5)]
+2021-06-20 20:13:48.519 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790605688311809 [0;39m 返回结果: {"content":[{"email":"zhang@qq.com","id":1,"name":"学生1","score":78.5}],"success":true}
+2021-06-20 20:13:48.519 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790605688311809 [0;39m ------------- 结束 耗时：109 ms -------------
+2021-06-20 20:13:51.680 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790619403685888 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:51.694 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790619403685888 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myClass GET
+2021-06-20 20:13:51.694 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790619403685888 [0;39m 类名方法: rainclassv3.controller.TeacherController.myClass
+2021-06-20 20:13:51.694 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790619403685888 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:51.697 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790619403685888 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3,"teacherid":"3"}]
+2021-06-20 20:13:51.922 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790619403685888 [0;39m 返回结果: {"content":{"list":[{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"},{"classname":"课程1","code":"123","credit":3,"desc":"这是操作系统的课程","id":4,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"},{"classname":"课程4","code":"123","credit":3,"desc":"这是操作系统的课程","id":7,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"}],"pageNum":1,"pageSize":3,"total":7},"success":true}
+2021-06-20 20:13:51.923 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790619403685888 [0;39m ------------- 结束 耗时：243 ms -------------
+2021-06-20 20:13:54.281 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790630313070592 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:54.282 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790630313070592 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myClass GET
+2021-06-20 20:13:54.283 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790630313070592 [0;39m 类名方法: rainclassv3.controller.TeacherController.myClass
+2021-06-20 20:13:54.283 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790630313070592 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:54.283 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790630313070592 [0;39m 请求参数: [{"classname":"","pageNum":2,"pageSize":3,"teacherid":"3"}]
+2021-06-20 20:13:54.369 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790630313070592 [0;39m 返回结果: {"content":{"list":[{"classname":"课程5","code":"123","credit":3,"desc":"这是操作系统的课程","id":8,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"自主发展课"},{"classname":"课程6","code":"123","credit":3,"desc":"这是操作系统的课程","id":9,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"},{"classname":"课程7","code":"123","credit":3,"desc":"这是操作系统的课程","id":10,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"$ref":"$.content.list[0].teacher"},"teacherid":3,"type":"自主发展课"}],"pageNum":2,"pageSize":3,"total":7},"success":true}
+2021-06-20 20:13:54.370 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790630313070592 [0;39m ------------- 结束 耗时：89 ms -------------
+2021-06-20 20:13:54.815 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790632552828928 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:54.816 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790632552828928 [0;39m 请求地址: http://127.0.0.1:9000/teacher/myClass GET
+2021-06-20 20:13:54.816 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790632552828928 [0;39m 类名方法: rainclassv3.controller.TeacherController.myClass
+2021-06-20 20:13:54.816 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790632552828928 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:54.817 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790632552828928 [0;39m 请求参数: [{"classname":"","pageNum":3,"pageSize":3,"teacherid":"3"}]
+2021-06-20 20:13:54.894 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790632552828928 [0;39m 返回结果: {"content":{"list":[{"classname":"课程8","code":"123","credit":3,"desc":"这是操作系统的课程","id":11,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"自主发展课"}],"pageNum":3,"pageSize":3,"total":7},"success":true}
+2021-06-20 20:13:54.895 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790632552828928 [0;39m ------------- 结束 耗时：80 ms -------------
+2021-06-20 20:13:56.916 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790641365061632 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:56.919 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790641365061632 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-20 20:13:56.919 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790641365061632 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-20 20:13:56.920 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790641365061632 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:56.923 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790641365061632 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
+2021-06-20 20:13:57.088 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790641365061632 [0;39m 返回结果: {"content":{"list":[{"classname":"数据结构","code":"123","credit":2,"desc":"数据结构（英语：data structure）是计算机中存储、组织数据的方式。 数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"createtime":1624178214000,"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacher":{"createtime":1624178215000,"id":2,"loginname":"jojo","realname":"jojo"},"teacherid":2,"type":"自主发展课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":1,"pageSize":3,"total":11},"success":true}
+2021-06-20 20:13:57.089 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790641365061632 [0;39m ------------- 结束 耗时：173 ms -------------
+2021-06-20 20:13:59.609 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790652660322304 [0;39m ------------- 开始 -------------
+2021-06-20 20:13:59.609 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790652660322304 [0;39m 请求地址: http://127.0.0.1:9000/student/myClass GET
+2021-06-20 20:13:59.610 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790652660322304 [0;39m 类名方法: rainclassv3.controller.StudentController.getMyClass
+2021-06-20 20:13:59.610 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790652660322304 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:13:59.613 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790652660322304 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3,"studentid":"3"}]
+2021-06-20 20:13:59.667 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790652660322304 [0;39m 返回结果: {"content":{"list":[],"pageNum":1,"pageSize":3,"total":0},"success":true}
+2021-06-20 20:13:59.668 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790652660322304 [0;39m ------------- 结束 耗时：59 ms -------------
+2021-06-20 20:14:03.789 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790670192513024 [0;39m ------------- 开始 -------------
+2021-06-20 20:14:03.790 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790670192513024 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-20 20:14:03.790 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790670192513024 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-20 20:14:03.790 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790670192513024 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:14:03.791 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790670192513024 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
+2021-06-20 20:14:03.981 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790670192513024 [0;39m 返回结果: {"content":{"list":[{"classname":"数据结构","code":"123","credit":2,"desc":"数据结构（英语：data structure）是计算机中存储、组织数据的方式。 数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"createtime":1624178214000,"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacher":{"createtime":1624178215000,"id":2,"loginname":"jojo","realname":"jojo"},"teacherid":2,"type":"自主发展课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":1,"pageSize":3,"total":11},"success":true}
+2021-06-20 20:14:03.983 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790670192513024 [0;39m ------------- 结束 耗时：194 ms -------------
+2021-06-20 20:14:05.479 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790677280886784 [0;39m ------------- 开始 -------------
+2021-06-20 20:14:05.480 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790677280886784 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-20 20:14:05.480 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790677280886784 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-20 20:14:05.481 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790677280886784 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:14:05.481 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790677280886784 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
+2021-06-20 20:14:05.650 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790677280886784 [0;39m 返回结果: {"content":{"list":[{"classname":"数据结构","code":"123","credit":2,"desc":"数据结构（英语：data structure）是计算机中存储、组织数据的方式。 数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"createtime":1624178214000,"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacher":{"createtime":1624178215000,"id":2,"loginname":"jojo","realname":"jojo"},"teacherid":2,"type":"自主发展课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":1,"pageSize":3,"total":11},"success":true}
+2021-06-20 20:14:05.650 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790677280886784 [0;39m ------------- 结束 耗时：171 ms -------------
+2021-06-20 20:14:07.426 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790685447196672 [0;39m ------------- 开始 -------------
+2021-06-20 20:14:07.427 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790685447196672 [0;39m 请求地址: http://127.0.0.1:9000/class/selectById/1 GET
+2021-06-20 20:14:07.427 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790685447196672 [0;39m 类名方法: rainclassv3.controller.ClassController.selectById
+2021-06-20 20:14:07.427 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790685447196672 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:14:07.428 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790685447196672 [0;39m 请求参数: ["1"]
+2021-06-20 20:14:07.515 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790685447196672 [0;39m 返回结果: {"content":{"classname":"数据结构","code":"123","credit":2,"desc":"数据结构（英语：data structure）是计算机中存储、组织数据的方式。 数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"createtime":1624178214000,"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},"success":true}
+2021-06-20 20:14:07.516 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790685447196672 [0;39m ------------- 结束 耗时：90 ms -------------
+2021-06-20 20:14:09.570 INFO  rainclassv3.aspect.LogAspect                      :62   [32m61790694439784448 [0;39m ------------- 开始 -------------
+2021-06-20 20:14:09.571 INFO  rainclassv3.aspect.LogAspect                      :63   [32m61790694439784448 [0;39m 请求地址: http://127.0.0.1:9000/class/list GET
+2021-06-20 20:14:09.571 INFO  rainclassv3.aspect.LogAspect                      :64   [32m61790694439784448 [0;39m 类名方法: rainclassv3.controller.ClassController.list
+2021-06-20 20:14:09.571 INFO  rainclassv3.aspect.LogAspect                      :65   [32m61790694439784448 [0;39m 远程地址: 127.0.0.1
+2021-06-20 20:14:09.571 INFO  rainclassv3.aspect.LogAspect                      :87   [32m61790694439784448 [0;39m 请求参数: [{"classname":"","pageNum":1,"pageSize":3}]
+2021-06-20 20:14:09.742 INFO  rainclassv3.aspect.LogAspect                      :99   [32m61790694439784448 [0;39m 返回结果: {"content":{"list":[{"classname":"数据结构","code":"123","credit":2,"desc":"数据结构（英语：data structure）是计算机中存储、组织数据的方式。 数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。","id":1,"notice":"带好课本","place":"学明楼","starttime":"周三","teacher":{"createtime":1624178214000,"id":1,"loginname":"dio","realname":"dio"},"teacherid":1,"type":"专业主干课"},{"classname":"计算机网络","code":"123","credit":3,"desc":"这是计算机网络的课程","id":2,"notice":"带好课本","place":"学海楼","starttime":"周三 ","teacher":{"createtime":1624178215000,"id":2,"loginname":"jojo","realname":"jojo"},"teacherid":2,"type":"自主发展课"},{"classname":"操作系统","code":"123","credit":3,"desc":"这是操作系统的课程","id":3,"notice":"带好课本","place":"明理楼","starttime":"周三","teacher":{"createtime":1624178216000,"id":3,"loginname":"faroz","realname":"faroz"},"teacherid":3,"type":"专业主干课"}],"pageNum":1,"pageSize":3,"total":11},"success":true}
+2021-06-20 20:14:09.743 INFO  rainclassv3.aspect.LogAspect                      :100  [32m61790694439784448 [0;39m ------------- 结束 耗时：173 ms -------------

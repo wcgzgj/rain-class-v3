@@ -1,5 +1,6 @@
 package rainclassv3.service;
 
+import rainclassv3.req.TeacherChangeScoreReq;
 import rainclassv3.req.TeacherMyClassQueryReq;
 import rainclassv3.req.TeacherMyStudentReq;
 import rainclassv3.resp.PageResp;
@@ -25,4 +26,11 @@ public interface TeacherService {
      * @return
      */
     List<TeacherMyStudentResp> getMyStudent(TeacherMyStudentReq req);
+
+
+    /**
+     * 教师修改学生成绩
+     * @param req
+     */
+    void changeScore(TeacherChangeScoreReq req);
 }

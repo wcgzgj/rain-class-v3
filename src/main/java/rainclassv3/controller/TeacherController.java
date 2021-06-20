@@ -2,9 +2,8 @@ package rainclassv3.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import rainclassv3.req.TeacherChangeScoreReq;
 import rainclassv3.req.TeacherMyClassQueryReq;
 import rainclassv3.req.TeacherMyStudentReq;
 import rainclassv3.resp.CommonResp;
@@ -45,6 +44,11 @@ public class TeacherController {
     }
 
 
+    /**
+     * 教师获取自己的课程的所有学生信息的接口
+     * @param req
+     * @return
+     */
     @GetMapping("/myStudent")
     public CommonResp myStudent(TeacherMyStudentReq req) {
         LOG.info("传入的课程id 为:{}",req.getClassid());
@@ -54,6 +58,20 @@ public class TeacherController {
         CommonResp commonResp = new CommonResp();
         commonResp.setContent(myStudent);
 
+        return commonResp;
+    }
+
+
+    /**
+     * 教师更改学生成绩接口
+     * @param req
+     * @return
+     */
+    @PostMapping("/changeScore")
+    public CommonResp changeScore(@RequestBody TeacherChangeScoreReq req) {
+        LOG.info("传入的成绩信息为:{}",req);
+        teacherService.changeScore(req);
+        CommonResp commonResp = new CommonResp();
         return commonResp;
     }
 

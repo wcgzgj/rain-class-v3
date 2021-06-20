@@ -42,7 +42,7 @@
 
                     <template #action="{ record }">
                       <span>
-                        <a-button type="primary" @click="changeScore(record)">修改成绩</a-button>
+                        <a-button type="primary" @click="showChangeScore(record)">修改成绩</a-button>
                       </span>
                     </template>
                 </a-table>
@@ -51,6 +51,22 @@
 
             </a-spin>
 
+
+            <a-modal
+                    v-model:visible="changeScoreModal"
+                    title="成绩修改"
+                    ok-text="确认"
+                    cancel-text="取消"
+                    @ok="changeScore">
+                <a-form :model="studentData" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+                    <a-form-item label="学生姓名">
+                        {{studentData.realname}}
+                    </a-form-item>
+                    <a-form-item label="学生成绩">
+                        <a-input v-model:value="studentData.score"/>
+                    </a-form-item>
+                </a-form>
+            </a-modal>
 
         </div>
     </a-layout-content>
@@ -108,6 +124,8 @@
             const classInfo=ref({})
 
             const teacherInfo = ref({});
+
+            const changeScoreModal = ref(false);
 
             const students = ref([]);
             students.value=[
@@ -167,9 +185,44 @@
              * 修改学生成绩
              * 点击修改后，会弹出成绩的模态框，在模态框中回填已经存在的数据
              */
-            const changeScore = (record) => {
+            const studentData = ref({
+                studentid:"",
+                realname:"",
+                score:0,
+                classid:"",
+            });
+
+            //展示学生信息，同时为要上传的信息赋值
+            const showChangeScore = (record) => {
                 console.log("被修改的学生id为:"+record.id);
                 console.log("被修改的学生姓名为:"+record.name);
+                changeScoreModal.value=true;
+                studentData.value.realname=record.name;
+                studentData.value.score=record.score;
+                studentData.value.studentid=record.id;
+                studentData.value.classid=classId;
+            }
+
+            //修改学生成绩
+            const changeScore = () => {
+                const score = studentData.value.score;
+                if(score<0 || score>100) {
+                    message.error("成绩输入错误，应在0-100之间");
+                    return false;
+                }
+                axios.post("/teacher/changeScore",studentData.value).then(resp => {
+                    const data = resp.data;
+                    if (data.success) {
+                        changeScoreModal.value=false;
+                        //可能需要重新刷新一下页面
+                        spinning.value=true;
+                        searchById();
+                        searchMyStudent();
+                        spinning.value=false;
+                    } else {
+                        message.error(data.message);
+                    }
+                })
             }
 
 
@@ -214,7 +267,15 @@
                  */
                 students,
                 columns,
-                changeScore
+                showChangeScore,
+
+
+                /**
+                 * 学生成绩修改
+                 */
+                changeScoreModal,
+                studentData,
+                changeScore,
             };
         },
     }

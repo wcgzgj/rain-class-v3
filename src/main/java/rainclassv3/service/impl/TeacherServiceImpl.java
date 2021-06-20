@@ -11,6 +11,7 @@ import rainclassv3.mapper.StudentMapper;
 import rainclassv3.mapper.TeacherMapper;
 import rainclassv3.pojo.*;
 import rainclassv3.pojo.Class;
+import rainclassv3.req.TeacherChangeScoreReq;
 import rainclassv3.req.TeacherMyClassQueryReq;
 import rainclassv3.req.TeacherMyStudentReq;
 import rainclassv3.resp.ClassQueryResp;
@@ -115,5 +116,37 @@ public class TeacherServiceImpl implements TeacherService {
             students.add(teacherMyStudentResp);
         }
         return students;
+    }
+
+    /**
+     * 教师修改学生成绩
+     *
+     * @param req
+     */
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+    @Override
+    public void changeScore(TeacherChangeScoreReq req) {
+        long classId = Long.parseLong(req.getClassid());
+        long studentId = Long.parseLong(req.getStudentid());
+        float score = Float.parseFloat(req.getScore());
+
+        ScoreExample scoreExample = new ScoreExample();
+        scoreExample.createCriteria().andStudentidEqualTo(studentId)
+                .andClassidEqualTo(classId);
+        List<Score> scores = scoreMapper.selectByExample(scoreExample);
+
+        /**
+         * 没有该条信息
+         */
+        if (scores==null || scores.size()==0) {
+            return ;
+        }
+
+        /**
+         * 更新成绩信息
+         */
+        Score dbScore = scores.get(0);
+        dbScore.setScorenum(score);
+        scoreMapper.updateByPrimaryKeySelective(dbScore);
     }
 }
