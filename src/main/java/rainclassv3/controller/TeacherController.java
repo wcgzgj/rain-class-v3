@@ -1,13 +1,19 @@
 package rainclassv3.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import rainclassv3.req.TeacherMyClassQueryReq;
+import rainclassv3.req.TeacherMyStudentReq;
 import rainclassv3.resp.CommonResp;
+import rainclassv3.resp.PageResp;
+import rainclassv3.resp.TeacherMyStudentResp;
 import rainclassv3.service.TeacherService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @ClassName TeacherController
@@ -20,6 +26,8 @@ import javax.annotation.Resource;
 @RequestMapping("/teacher")
 public class TeacherController {
 
+    private static final Logger LOG= LoggerFactory.getLogger(TeacherController.class);
+
     @Resource
     private TeacherService teacherService;
 
@@ -30,10 +38,22 @@ public class TeacherController {
      */
     @GetMapping("/myClass")
     public CommonResp myClass(TeacherMyClassQueryReq req) {
+        PageResp list = teacherService.list(req);
+        CommonResp commonResp = new CommonResp();
+        commonResp.setContent(list);
+        return commonResp;
+    }
 
 
+    @GetMapping("/myStudent")
+    public CommonResp myStudent(TeacherMyStudentReq req) {
+        LOG.info("传入的课程id 为:{}",req.getClassid());
+        List<TeacherMyStudentResp> myStudent = teacherService.getMyStudent(req);
+        LOG.info("获取的学生数据为:{}",myStudent);
 
         CommonResp commonResp = new CommonResp();
+        commonResp.setContent(myStudent);
+
         return commonResp;
     }
 
