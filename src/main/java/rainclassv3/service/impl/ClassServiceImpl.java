@@ -11,9 +11,11 @@ import org.springframework.web.multipart.MultipartFile;
 import rainclassv3.exception.FileException;
 import rainclassv3.exception.FileExceptionCode;
 import rainclassv3.mapper.ClassMapper;
+import rainclassv3.mapper.ScoreMapper;
 import rainclassv3.mapper.TeacherMapper;
 import rainclassv3.pojo.Class;
 import rainclassv3.pojo.ClassExample;
+import rainclassv3.pojo.ScoreExample;
 import rainclassv3.pojo.Teacher;
 import rainclassv3.req.ClassQueryReq;
 import rainclassv3.req.ClassSaveReq;
@@ -50,6 +52,9 @@ public class ClassServiceImpl implements ClassService {
 
     @Resource
     private SnowFlake snowFlake;
+
+    @Resource
+    private ScoreMapper scoreMapper;
 
     private static final Logger LOG= LoggerFactory.getLogger(ClassServiceImpl.class);
 
@@ -195,5 +200,28 @@ public class ClassServiceImpl implements ClassService {
         picUploadResp.setShowPath("http://127.0.0.1:9000/disPic/"+newFileName);
 
         return picUploadResp;
+    }
+
+    /**
+     * 根据 id 删除课程信息
+     * 不但要删除 class 表的信息
+     * 还要删 score 表的
+     *
+     * @param id
+     */
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+    @Override
+    public void deleteById(Long id) {
+        /**
+         * 删除 class 表中的信息
+         */
+        classMapper.deleteByPrimaryKey(id);
+
+        /**
+         * 删除成绩表的信息
+         */
+        ScoreExample scoreExample = new ScoreExample();
+        scoreExample.createCriteria().andClassidEqualTo(id);
+        scoreMapper.deleteByExample(scoreExample);
     }
 }

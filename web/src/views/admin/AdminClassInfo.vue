@@ -62,7 +62,20 @@
                 </a-form-item>
 
                 <a-form-item :wrapper-col="{ span: 14, offset: 4 }">
-                    <a-button type="primary" @click="save">保存</a-button>
+                    <a-button type="primary" @click="save">保存</a-button> &nbsp; &nbsp;
+
+                    <a-popconfirm
+                            title="确认删除课程？"
+                            ok-text="是"
+                            cancel-text="否"
+                            @confirm="deleteById"
+                            @cancel="cancel"
+                    >
+
+                        <a-button type="danger" >删除</a-button>
+                    </a-popconfirm>
+
+
                 </a-form-item>
 
             </a-form>
@@ -99,7 +112,7 @@
             const classData = ref({
                 id:classId,
                 classname:"",
-                teacherid:"2",
+                teacherid:"",
                 starttime:"",
                 code:"",
                 place:"",
@@ -191,6 +204,22 @@
             }
 
 
+            /**
+             * 根据课程 id 删除课程信息
+             */
+            const deleteById = () => {
+                axios.delete("/class/delete/"+classId).then(resp=> {
+                    const data = resp.data;
+                    if (data.success) {
+                        message.success("删除成功");
+                        router.push("/adminClassList");
+                    } else {
+                        message.error(data.message);
+                    }
+                })
+            }
+
+
             onMounted(()=>{
                 console.log("传入的课程id为:"+classId);
                 getClassInfo();
@@ -205,7 +234,8 @@
                 uploadImage,
                 picShowPath,
                 searchTeacherList,
-                basePicPath
+                basePicPath,
+                deleteById
             };
         },
     }

@@ -54,4 +54,12 @@ public interface ClassService {
      * @return
      */
     PicUploadResp upload(MultipartFile file);
+
+    /**
+     * 根据 id 删除课程信息
+     * 不但要删除 class 表的信息
+     * 还要删 score 表的
+     * @param id
+     */
+    void deleteById(Long id);
 }

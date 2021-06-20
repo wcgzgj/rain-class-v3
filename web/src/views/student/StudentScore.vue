@@ -26,7 +26,7 @@
                             <img
                                     width="200"
                                     alt="logo"
-                                    src="../../assets/ds.jpg"
+                                    :src="basePicPath+item.path"
                             />
                         </template>
                         <a-list-item-meta :description="'我的成绩'">
@@ -59,6 +59,13 @@
     export default {
         name: "StudentScore",
         setup() {
+
+            /**
+             * 展示图片的基础路径
+             */
+            const basePicPath=ref("");
+            basePicPath.value+=process.env.VUE_APP_SERVER+"/disPic/";
+
             const loading=ref(true);
 
             const user = computed(() => store.state.user);
@@ -132,7 +139,8 @@
                 onSearch,
                 searchForm,
                 user,
-                loading
+                loading,
+                basePicPath
             };
         }
     }

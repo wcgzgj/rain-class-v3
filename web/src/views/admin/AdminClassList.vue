@@ -41,7 +41,7 @@
                             <img
                                     width="200"
                                     alt="logo"
-                                    src="../../assets/ds.jpg"
+                                    :src="basePicPath+item.path"
                             />
                         </template>
                         <a-list-item-meta :description="'课程介绍'">
@@ -73,6 +73,11 @@
     export default {
         name: "AdminClass",
         setup() {
+            /**
+             * 展示图片的基础路径
+             */
+            const basePicPath=ref("");
+            basePicPath.value+=process.env.VUE_APP_SERVER+"/disPic/";
 
             const loading = ref(true);
 
@@ -143,6 +148,7 @@
                 onSearch,
                 searchForm,
                 loading,
+                basePicPath,
 
             };
         }

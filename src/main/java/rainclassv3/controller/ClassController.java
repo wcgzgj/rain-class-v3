@@ -95,4 +95,14 @@ public class ClassController {
         classService.save(req);
         return new CommonResp();
     }
+
+
+    @DeleteMapping("/delete/{id}")
+    public CommonResp deleteById(@PathVariable("id") String id) {
+        long classId = Long.parseLong(id);
+        classService.deleteById(classId);
+
+        return new CommonResp();
+    }
+
 }
