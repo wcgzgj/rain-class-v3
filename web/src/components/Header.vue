@@ -66,7 +66,11 @@
                     </router-link>
                 </a-menu-item>
                 <!--展示老师对学生的评价信息-->
-                <a-menu-item key="t2">我的评价</a-menu-item>
+                <a-menu-item key="t2">
+                    <router-link to="/teacherComment">
+                        我的评价
+                    </router-link>
+                </a-menu-item>
                 <!--<a-menu-item key="t3">成绩预警</a-menu-item>-->
                 <!--<a-menu-item key="t4">成绩通知</a-menu-item>-->
             </a-sub-menu>
