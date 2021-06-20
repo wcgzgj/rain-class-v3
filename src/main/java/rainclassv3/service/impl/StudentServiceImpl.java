@@ -1,6 +1,8 @@
 package rainclassv3.service.impl;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import rainclassv3.mapper.ClassMapper;
 import rainclassv3.mapper.ScoreMapper;
 import rainclassv3.mapper.StudentMapper;
@@ -10,8 +12,10 @@ import rainclassv3.pojo.Class;
 import rainclassv3.req.StudentClassChangeReq;
 import rainclassv3.req.StudentIsChosenReq;
 import rainclassv3.req.StudentMyClassQueryReq;
+import rainclassv3.req.StudentMyScoreReq;
 import rainclassv3.resp.ClassQueryResp;
 import rainclassv3.resp.PageResp;
+import rainclassv3.resp.StudentMyScoreResp;
 import rainclassv3.service.StudentService;
 import rainclassv3.util.CopyUtil;
 import rainclassv3.util.SnowFlake;
@@ -161,5 +165,31 @@ public class StudentServiceImpl implements StudentService {
         score.setId(id);
         
         scoreMapper.insert(score);
+    }
+
+
+    /**
+     * 获取当前学生的所有课程的成绩
+     * @param req
+     * @return
+     */
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
+    @Override
+    public List<StudentMyScoreResp> getMyScore(StudentMyScoreReq req) {
+        long studentId = Long.parseLong(req.getStudentid());
+        ScoreExample scoreExample = new ScoreExample();
+        scoreExample.createCriteria().andStudentidEqualTo(studentId);
+        List<Score> scores = scoreMapper.selectByExample(scoreExample);
+
+        List<StudentMyScoreResp> studentMyScoreResps = new ArrayList<>();
+        for (Score score : scores) {
+            StudentMyScoreResp studentMyScoreResp = new StudentMyScoreResp();
+            Class aClass = classMapper.selectByPrimaryKey(score.getClassid());
+            studentMyScoreResp.setClassInfo(aClass);
+            studentMyScoreResp.setScore(score.getScorenum());
+            studentMyScoreResps.add(studentMyScoreResp);
+        }
+
+        return studentMyScoreResps;
     }
 }

@@ -5,15 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import rainclassv3.req.StudentClassChangeReq;
-import rainclassv3.req.StudentClassQueryReq;
-import rainclassv3.req.StudentIsChosenReq;
-import rainclassv3.req.StudentMyClassQueryReq;
+import rainclassv3.req.*;
 import rainclassv3.resp.CommonResp;
 import rainclassv3.resp.PageResp;
+import rainclassv3.resp.StudentMyScoreResp;
 import rainclassv3.service.StudentService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @ClassName StudentController
@@ -95,6 +94,19 @@ public class StudentController {
     public CommonResp cancelClass(StudentClassChangeReq req) {
         studentService.cancelClass(req);
         CommonResp commonResp = new CommonResp();
+        return commonResp;
+    }
+
+
+    /**
+     * 学生 获取我的成绩接口
+     * @return
+     */
+    @RequestMapping("/myScore")
+    public CommonResp myScore(StudentMyScoreReq req) {
+        List<StudentMyScoreResp> myScore = studentService.getMyScore(req);
+        CommonResp commonResp = new CommonResp();
+        commonResp.setContent(myScore);
         return commonResp;
     }
 

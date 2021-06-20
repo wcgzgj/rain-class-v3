@@ -1,10 +1,8 @@
 package rainclassv3.service;
 
-import rainclassv3.req.ClassQueryReq;
-import rainclassv3.req.StudentClassChangeReq;
-import rainclassv3.req.StudentIsChosenReq;
-import rainclassv3.req.StudentMyClassQueryReq;
+import rainclassv3.req.*;
 import rainclassv3.resp.PageResp;
+import rainclassv3.resp.StudentMyScoreResp;
 
 import java.util.List;
 
@@ -39,4 +37,11 @@ public interface StudentService {
      * @param req
      */
     void selectClass(StudentClassChangeReq req);
+
+    /**
+     * 获取当前学生的成绩
+     * @param req
+     * @return
+     */
+    List<StudentMyScoreResp> getMyScore(StudentMyScoreReq req);
 }
