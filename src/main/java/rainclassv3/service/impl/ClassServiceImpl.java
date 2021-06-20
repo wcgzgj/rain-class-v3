@@ -16,8 +16,10 @@ import rainclassv3.resp.ClassQueryResp;
 import rainclassv3.resp.PageResp;
 import rainclassv3.service.ClassService;
 import rainclassv3.util.CopyUtil;
+import rainclassv3.util.SnowFlake;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -35,6 +37,9 @@ public class ClassServiceImpl implements ClassService {
 
     @Resource
     private TeacherMapper teacherMapper;
+
+    @Resource
+    private SnowFlake snowFlake;
 
     /**
      * 分页、模糊查询
@@ -85,7 +90,20 @@ public class ClassServiceImpl implements ClassService {
      */
     @Override
     public int save(ClassSaveReq req) {
-        return -1;
+        Long id = req.getId();
+        int count=0;
+        if (id==null) {
+            //新增
+            req.setId(snowFlake.nextId());
+            Class copy = CopyUtil.copy(req, Class.class);
+            copy.setCreatetime(new Date());
+            count = classMapper.insert(copy);
+        } else {
+            //更新
+            Class copy = CopyUtil.copy(req, Class.class);
+            count = classMapper.updateByPrimaryKeySelective(copy);
+        }
+        return count;
     }
 
 

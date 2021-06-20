@@ -11,6 +11,8 @@ import StudentScore from '../views/student/StudentScore.vue'
 import TeacherClassInfo from '../views/teacher/TeacherClassInfo.vue'
 import TeacherClassList from '../views/teacher/TeacherClassList.vue'
 import TeacherComment from '../views/teacher/TeacherComment.vue'
+import AdminClassList from '../views/admin/AdminClassList.vue'
+import AdminClassInfo from '../views/admin/AdminClassInfo.vue'
 import ResetPassword from '../views/user/ResetPassword.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -78,6 +80,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/resetPassword',
     name: 'ResetPassword',
     component: ResetPassword
+  },
+  {
+    path: '/adminClassList',
+    name: 'AdminClassList',
+    component: AdminClassList
+  },
+  {
+    path: '/adminClassInfo',
+    name: 'AdminClassInfo',
+    component: AdminClassInfo
   },
 ]
 
