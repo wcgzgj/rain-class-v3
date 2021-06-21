@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,6 +30,7 @@ import rainclassv3.util.SnowFlake;
 import rainclassv3.util.ValidType;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
@@ -57,6 +59,17 @@ public class ClassServiceImpl implements ClassService {
     private ScoreMapper scoreMapper;
 
     private static final Logger LOG= LoggerFactory.getLogger(ClassServiceImpl.class);
+
+    /**
+     * disPic:
+     *   file-path: /Users/faro_z/Pictures/cover
+     *   web-path: http://127.0.0.1:9000/disPic/
+     */
+    @Value("${disPic.file-path}")
+    private String FILE_PATH;
+
+    @Value("${disPic.web-path}")
+    private String WEB_PATH;
 
     /**
      * 分页、模糊查询
@@ -154,7 +167,6 @@ public class ClassServiceImpl implements ClassService {
      */
     @Override
     public PicUploadResp upload(MultipartFile file) {
-        String path = "/Users/faro_z/Pictures/cover";
         String originalFilename = file.getOriginalFilename();
 
         LOG.info("获取的文件名为:{}",originalFilename);
@@ -174,7 +186,7 @@ public class ClassServiceImpl implements ClassService {
 
         String newFileName = String.valueOf(snowFlake.nextId())+hz;
         StringBuilder sb = new StringBuilder();
-        sb.append(path)
+        sb.append(FILE_PATH)
                 .append("/")
                 .append(newFileName);
         String newPath = sb.toString();
@@ -197,7 +209,7 @@ public class ClassServiceImpl implements ClassService {
          */
         PicUploadResp picUploadResp = new PicUploadResp();
         picUploadResp.setPath(newFileName);
-        picUploadResp.setShowPath("http://127.0.0.1:9000/disPic/"+newFileName);
+        picUploadResp.setShowPath(WEB_PATH+newFileName);
 
         return picUploadResp;
     }

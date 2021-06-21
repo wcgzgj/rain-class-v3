@@ -9,7 +9,7 @@
                     <a-list-item>
                         <router-link to="">
                             <a-card :title="item.title">
-                                Microsoft Word
+                                点击下载
                             </a-card>
                         </router-link>
                     </a-list-item>
@@ -24,22 +24,22 @@
 <script>
     const data = [
         {
-            title: 'Title 1',
+            title: 'office',
         },
         {
-            title: 'Title 2',
+            title: 'xnip',
         },
         {
-            title: 'Title 3',
+            title: 'vpn',
         },
         {
-            title: 'Title 4',
+            title: 'buhnrop',
         },
         {
-            title: 'Title 5',
+            title: '赵家军谱',
         },
         {
-            title: 'Title 6',
+            title: '邓小平时代',
         },
     ];
     export default {
