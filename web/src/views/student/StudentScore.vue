@@ -26,7 +26,7 @@
                             <img
                                     width="200"
                                     alt="logo"
-                                    :src="basePicPath+item.path"
+                                    :src="basePicPath+item.classInfo.path"
                             />
                         </template>
                         <a-list-item-meta :description="'我的成绩'">

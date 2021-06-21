@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import rainclassv3.req.PasswordChangeReq;
 import rainclassv3.req.PasswordCheckReq;
 import rainclassv3.req.UserLoginReq;
+import rainclassv3.req.UserRegisterReq;
 import rainclassv3.resp.AdminLoginResp;
 import rainclassv3.resp.CommonResp;
 import rainclassv3.resp.UserLoginResp;
@@ -127,6 +128,12 @@ public class UserController {
         }
 
         return commonResp;
+    }
+
+    @PostMapping("/register")
+    public CommonResp register(@RequestBody UserRegisterReq req) {
+        userService.saveStudent(req);
+        return new CommonResp();
     }
 
 

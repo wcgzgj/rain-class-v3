@@ -15,6 +15,7 @@ import AdminClassList from '../views/admin/AdminClassList.vue'
 import AdminClassInfo from '../views/admin/AdminClassInfo.vue'
 import AdminClassAdd from '../views/admin/AdminClassAdd.vue'
 import AdminComment from '../views/admin/AdminComment.vue'
+import AdminFile from '../views/admin/AdminFile.vue'
 import ResetPassword from '../views/user/ResetPassword.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -102,6 +103,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/adminComment',
     name: 'AdminComment',
     component: AdminComment
+  },
+  {
+    path: '/adminFile',
+    name: 'AdminFile',
+    component: AdminFile
   },
 
 ]

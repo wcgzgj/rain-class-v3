@@ -113,7 +113,7 @@
                     </span>
                 </template>
                 <a-menu-item key="l1" :onclick="showLogin">登录</a-menu-item>
-                <a-menu-item key="l2">注册</a-menu-item>
+                <a-menu-item key="l2" :onclick="showRegister">注册</a-menu-item>
             </a-sub-menu>
 
 
@@ -165,24 +165,20 @@
 
 
     <a-modal
-            v-model:visible="loginVisible"
-            title="注册"
+            v-model:visible="registerVisible"
+            title="学生注册"
             ok-text="确认"
             cancel-text="取消"
-            @ok="login">
+            @ok="register">
         <a-form :model="registerUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
-            <a-form-item label="用户名">
-                <a-input v-model:value="loginUser.loginname" />
+            <a-form-item label="登录名">
+                <a-input v-model:value="registerUser.loginname" />
+            </a-form-item>
+            <a-form-item label="真实姓名">
+                <a-input v-model:value="registerUser.realname" />
             </a-form-item>
             <a-form-item label="密码">
-                <a-input v-model:value="loginUser.password" type="password"/>
-            </a-form-item>
-            <a-form-item label="身份选择">
-                <a-radio-group v-model:value="loginUser.role" button-style="solid">
-                    <a-radio-button value="student">学生</a-radio-button>
-                    <a-radio-button value="teacher">老师</a-radio-button>
-                    <a-radio-button value="admin">管理员</a-radio-button>
-                </a-radio-group>
+                <a-input v-model:value="registerUser.password" type="password"/>
             </a-form-item>
         </a-form>
     </a-modal>
@@ -211,6 +207,7 @@
              * @type {Ref<UnwrapRef<boolean>>}
              */
             const loginVisible = ref(false);
+            const registerVisible = ref(false);
 
             const loginUser = ref({
                 loginname:"",
@@ -238,6 +235,17 @@
                 loginVisible.value = false;
             };
 
+            const showRegister = () => {
+                registerVisible.value = true;
+            };
+
+            const hideRegister = () => {
+                registerUser.value.loginname="";
+                registerUser.value.realname="";
+                registerUser.value.password="";
+                registerVisible.value = false;
+            };
+
             const login = () => {
                 console.log("点击登录按钮");
                 if (Tool.isEmpty(loginUser.value.loginname) ||
@@ -257,6 +265,27 @@
                         hideLogin();
                     } else {
                         message.error(data.message);
+                    }
+                })
+            }
+
+            /**
+             * 注册
+             */
+            const register = () => {
+                if (Tool.isEmpty(registerUser.value.loginname) ||
+                    Tool.isEmpty(registerUser.value.password) ||
+                    Tool.isEmpty(registerUser.value.realname)) {
+                    message.error("请输入完整信息");
+                    return false;
+                }
+                axios.post("/user/register",registerUser.value).then(resp=> {
+                    const data = resp.data;
+                    hideRegister();
+                    if (data.success) {
+                        message.success("注册成功");
+                    } else {
+                        message.error("注册失败！");
                     }
                 })
             }
@@ -290,6 +319,11 @@
                 hideLogin,
                 login,
                 logout,
+                registerUser,
+                showRegister,
+                hideRegister,
+                registerVisible,
+                register
             }
         }
     }

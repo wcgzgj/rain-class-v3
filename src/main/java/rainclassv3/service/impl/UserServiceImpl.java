@@ -11,14 +11,17 @@ import rainclassv3.mapper.TeacherMapper;
 import rainclassv3.pojo.*;
 import rainclassv3.req.PasswordChangeReq;
 import rainclassv3.req.UserLoginReq;
+import rainclassv3.req.UserRegisterReq;
 import rainclassv3.resp.AdminLoginResp;
 import rainclassv3.resp.StudentLoginResp;
 import rainclassv3.resp.TeacherLoginResp;
 import rainclassv3.resp.UserLoginResp;
 import rainclassv3.service.UserService;
 import rainclassv3.util.CopyUtil;
+import rainclassv3.util.SnowFlake;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -42,6 +45,9 @@ public class UserServiceImpl implements UserService {
 
     @Resource
     private AdminMapper adminMapper;
+
+    @Resource
+    private SnowFlake snowFlake;
 
 
     /**
@@ -126,5 +132,18 @@ public class UserServiceImpl implements UserService {
             case "admin":
                 break;
         }
+    }
+
+    /**
+     * 学生注册
+     *
+     * @param req
+     */
+    @Override
+    public void saveStudent(UserRegisterReq req) {
+        Student student = CopyUtil.copy(req, Student.class);
+        student.setCreatetime(new Date());
+        student.setId(snowFlake.nextId());
+        studentMapper.insert(student);
     }
 }
