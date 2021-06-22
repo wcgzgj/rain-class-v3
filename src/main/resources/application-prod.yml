@@ -8,6 +8,7 @@ spring:
     password: <poassword>
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+
   redis:
     # 主机位置
     host: <redis>
