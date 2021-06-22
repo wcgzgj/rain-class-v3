@@ -2,6 +2,7 @@ package rainclassv3.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -18,6 +19,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
 
+    @Value("${disPic.file-path}")
+    private String FILE_PATH;
+
+    @Value("${disPic.web-path}")
+    private String WEB_PATH;
+
+
     private static final Logger LOG= LoggerFactory.getLogger(CorsConfig.class);
 
     @Override
@@ -33,7 +41,8 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         LOG.info("外部尝试访问磁盘图片");
-        registry.addResourceHandler("/disPic/**").addResourceLocations("file:/Users/faro_z/Pictures/cover/");
+        LOG.info("拦截器中设置的路径为:{}","file:"+FILE_PATH);
+        registry.addResourceHandler("/disPic/**").addResourceLocations("file:"+FILE_PATH+"/");
 
         // http://127.0.0.1:9000/disPic/1.jpg
     }

@@ -95,6 +95,7 @@
     </dependencies>
 
     <build>
+        <finalName>rainclass</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

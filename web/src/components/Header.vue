@@ -34,7 +34,7 @@
 
 
             <!--学生操作下拉框-->
-            <a-sub-menu key="stu">
+            <a-sub-menu key="stu" :style="user.role=='student'?{}:{visibility:'hidden'}">
                 <template #title>
             <span>
               <span>学生</span>
@@ -59,7 +59,7 @@
             </a-sub-menu>
 
             <!--老师操作下拉框-->
-            <a-sub-menu key="tea">
+            <a-sub-menu key="tea"  :style="user.role=='teacher'?{}:{visibility:'hidden'}">
                 <template #title>
                     <span>
                       <span>老师</span>
@@ -83,7 +83,7 @@
 
 
             <!--管理员操作下拉框-->
-            <a-sub-menu key="admin">
+            <a-sub-menu key="admin" :style="user.role=='admin'?{}:{visibility:'hidden'}">
                 <template #title>
                     <span>
                       <span>管理员</span>
@@ -96,7 +96,11 @@
                         课程管理
                     </router-link>
                 </a-menu-item>
-                <a-menu-item key="a4">资源管理</a-menu-item>
+                <a-menu-item key="a4">
+                    <router-link to="/adminFile">
+                        资源管理
+                    </router-link>
+                </a-menu-item>
                 <a-menu-item key="a5">
                     <router-link to="/adminComment">
                         评论管理
@@ -130,7 +134,7 @@
                         密码重置
                     </router-link>
                 </a-menu-item>
-                <a-menu-item key="u3">个人信息</a-menu-item>
+                <!--<a-menu-item key="u3">个人信息</a-menu-item>-->
             </a-sub-menu>
 
 
